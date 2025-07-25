@@ -24,3 +24,6 @@ Panel data analysis evaluating health system performance across 5 European count
 ## Technologies
 - **Statistical Software**: Stata (panel data econometrics, fixed effects modeling)
 - **Analysis**: Panel regression, composite index construction, diagnostic testing
+
+## Author
+**Anastasiia Golovchenko** 
