@@ -1,0 +1,3549 @@
+-------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /Users/Ferniz/Documents/LSE /HP434/HP434_data.log
+  log type:  text
+ opened on:  12 Apr 2024, 18:01:54
+
+. 
+. 
+. use HP434.dta, clear
+
+. 
+. 
+. *label define country_labels 1 "France" 2 "Italy" 3 "UK" 4 "Germany" 5 "Spain"
+. *label values country country_labels
+. *label define country_labels , add
+. *label values country country_labels
+. 
+. describe
+
+Contains data from HP434.dta
+ Observations:            60                  
+    Variables:            11                  9 Apr 2024 02:31
+-------------------------------------------------------------------------------------------------------
+Variable      Storage   Display    Value
+    name         type    format    label      Variable label
+-------------------------------------------------------------------------------------------------------
+country         byte    %8.0g      country_labels
+                                              
+quarter         byte    %8.0g                 
+test_per_case   double  %8.0g                 
+ful_vac         double  %8.0g                 
+EM              double  %8.0g                 
+CFR             double  %8.0g                 
+ICU             double  %8.0g                 
+GDP             double  %8.0g                 
+unempl          double  %8.0g                 
+CCI             double  %8.0g                 
+gov_resp        double  %8.0g                 
+-------------------------------------------------------------------------------------------------------
+Sorted by: country  quarter
+
+. codebook
+
+-------------------------------------------------------------------------------------------------------
+country                                                                                     (unlabeled)
+-------------------------------------------------------------------------------------------------------
+
+                  Type: Numeric (byte)
+                 Label: country_labels
+
+                 Range: [1,5]                         Units: 1
+         Unique values: 5                         Missing .: 0/60
+
+            Tabulation: Freq.   Numeric  Label
+                           12         1  France
+                           12         2  Italy
+                           12         3  UK
+                           12         4  Germany
+                           12         5  Spain
+
+-------------------------------------------------------------------------------------------------------
+quarter                                                                                     (unlabeled)
+-------------------------------------------------------------------------------------------------------
+
+                  Type: Numeric (byte)
+
+                 Range: [1,12]                        Units: 1
+         Unique values: 12                        Missing .: 0/60
+
+                  Mean:     6.5
+             Std. dev.: 3.48118
+
+           Percentiles:     10%       25%       50%       75%       90%
+                              2       3.5       6.5       9.5        11
+
+-------------------------------------------------------------------------------------------------------
+test_per_case                                                                               (unlabeled)
+-------------------------------------------------------------------------------------------------------
+
+                  Type: Numeric (double)
+
+                 Range: [1,266.9]                     Units: .1
+         Unique values: 46                        Missing .: 0/60
+
+                  Mean: 35.3083
+             Std. dev.: 57.7261
+
+           Percentiles:     10%       25%       50%       75%       90%
+                              1       3.1      8.85      39.7     112.5
+
+-------------------------------------------------------------------------------------------------------
+ful_vac                                                                                     (unlabeled)
+-------------------------------------------------------------------------------------------------------
+
+                  Type: Numeric (double)
+
+                 Range: [0,85.62]                     Units: .01
+         Unique values: 42                        Missing .: 0/60
+
+                  Mean: 41.8612
+             Std. dev.: 36.4159
+
+           Percentiles:     10%       25%       50%       75%       90%
+                              0        .5     56.61      76.2    81.155
+
+-------------------------------------------------------------------------------------------------------
+EM                                                                                          (unlabeled)
+-------------------------------------------------------------------------------------------------------
+
+                  Type: Numeric (double)
+
+                 Range: [-6.19,139.66]                Units: .01
+         Unique values: 59                        Missing .: 0/60
+
+                  Mean: 13.9017
+             Std. dev.:  22.607
+
+           Percentiles:     10%       25%       50%       75%       90%
+                         -2.595     2.985     8.185     14.99    38.165
+
+-------------------------------------------------------------------------------------------------------
+CFR                                                                                         (unlabeled)
+-------------------------------------------------------------------------------------------------------
+
+                  Type: Numeric (double)
+
+                 Range: [.1,4.02]                     Units: .01
+         Unique values: 45                        Missing .: 0/60
+
+                  Mean:     .96
+             Std. dev.: .843059
+
+           Percentiles:     10%       25%       50%       75%       90%
+                            .18      .305        .6       1.5     1.895
+
+-------------------------------------------------------------------------------------------------------
+ICU                                                                                         (unlabeled)
+-------------------------------------------------------------------------------------------------------
+
+                  Type: Numeric (double)
+
+                 Range: [1,82.41]                     Units: .001
+         Unique values: 60                        Missing .: 0/60
+
+                  Mean: 21.8346
+             Std. dev.: 21.8403
+
+           Percentiles:     10%       25%       50%       75%       90%
+                         3.4855    5.0705   12.7255    32.128    57.544
+
+-------------------------------------------------------------------------------------------------------
+GDP                                                                                         (unlabeled)
+-------------------------------------------------------------------------------------------------------
+
+                  Type: Numeric (double)
+
+                 Range: [-20.3225,17.5368]            Units: 1.000e-06
+         Unique values: 58                        Missing .: 0/60
+
+                  Mean:  .316905
+             Std. dev.:  6.45325
+
+           Percentiles:      10%       25%       50%       75%       90%
+                        -5.72891  -.322311        .4   1.66933   5.15571
+
+-------------------------------------------------------------------------------------------------------
+unempl                                                                                      (unlabeled)
+-------------------------------------------------------------------------------------------------------
+
+                  Type: Numeric (double)
+
+                 Range: [3,16.4]                      Units: .1
+         Unique values: 41                        Missing .: 0/60
+
+                  Mean: 7.76833
+             Std. dev.: 4.04192
+
+           Percentiles:     10%       25%       50%       75%       90%
+                           3.35       3.9      7.65       9.8     14.35
+
+-------------------------------------------------------------------------------------------------------
+CCI                                                                                         (unlabeled)
+-------------------------------------------------------------------------------------------------------
+
+                  Type: Numeric (double)
+
+                 Range: [92.2,103.1]                  Units: .01
+         Unique values: 52                        Missing .: 0/60
+
+                  Mean: 98.7918
+             Std. dev.:  2.3936
+
+           Percentiles:     10%       25%       50%       75%       90%
+                         96.095    97.235     99.07   100.375    101.45
+
+-------------------------------------------------------------------------------------------------------
+gov_resp                                                                                    (unlabeled)
+-------------------------------------------------------------------------------------------------------
+
+                  Type: Numeric (double)
+
+                 Range: [5.56,85.19]                  Units: .01
+         Unique values: 55                        Missing .: 0/60
+
+                  Mean: 51.3878
+             Std. dev.: 21.8712
+
+           Percentiles:     10%       25%       50%       75%       90%
+                          14.96     35.31     53.99     69.44    77.565
+
+. summarize
+
+    Variable |        Obs        Mean    Std. dev.       Min        Max
+-------------+---------------------------------------------------------
+     country |         60           3    1.426148          1          5
+     quarter |         60         6.5    3.481184          1         12
+test_per_c~e |         60    35.30833    57.72612          1      266.9
+     ful_vac |         60    41.86117    36.41589          0      85.62
+          EM |         60    13.90167    22.60703      -6.19     139.66
+-------------+---------------------------------------------------------
+         CFR |         60         .96    .8430594         .1       4.02
+         ICU |         60    21.83457    21.84034          1      82.41
+         GDP |         60    .3169053    6.453251   -20.3225    17.5368
+      unempl |         60    7.768333     4.04192          3       16.4
+         CCI |         60    98.79183      2.3936       92.2      103.1
+-------------+---------------------------------------------------------
+    gov_resp |         60    51.38783    21.87122       5.56      85.19
+
+. 
+. misstable sum 
+(variables nonmissing or string)
+
+. misstable pattern 
+(no missing values)
+
+. 
+. correlate EM GDP 
+(obs=60)
+
+             |       EM      GDP
+-------------+------------------
+          EM |   1.0000
+         GDP |  -0.1478   1.0000
+
+
+. 
+. *manova EM GDP = c.test_per_case c.ful_vac c.CFR c.ICU c.unempl c.CCI c.gov_resp
+. *mvreg
+. 
+. 
+. /*sum EM
+> local min_EM = r(min)
+> local max_EM = r(max)
+> display `min_EM'
+> display `max_EM'
+> gen EM_norm = (EM - `min_EM') / (`max_EM' - `min_EM')
+> 
+> sum GDP
+> local min_GDP = r(min)
+> local max_GDP = r(max)
+> gen GDP_norm = (GDP - `min_GDP') / (`max_GDP' - `min_GDP')
+> 
+> 
+> gen HS = (EM_norm + GDP_norm) *100/ 2
+> 
+> */
+. 
+. egen EM_min = min(EM)
+
+. egen EM_max = max(EM)
+
+. gen EM_norm = (EM - EM_min) / (EM_max - EM_min)
+
+. gen EM_inv = 1 - EM_norm
+
+. egen GDP_min = min(GDP)
+
+. egen GDP_max = max(GDP)
+
+. gen GDP_norm = (GDP - GDP_min) / (GDP_max - GDP_min)
+
+. gen HS = (EM_inv + GDP_norm) / 2
+
+. sum HS
+
+    Variable |        Obs        Mean    Std. dev.       Min        Max
+-------------+---------------------------------------------------------
+          HS |         60    .7037025    .1233771   .1970784   .9710662
+
+. 
+. 
+. *egen EM_std = std(EM)
+. *egen GDP_std = std(GDP)
+. *gen HS = (EM_std + GDP_std)/ 2
+. *sum HS
+. 
+. histogram HS, normal title("Histogram of Health System Index") xtitle("Health System Index") ytitle("
+> Frequency") xlabel(, grid) ylabel(, grid) color(navy) bin(10) kdensity legend(on)
+(bin=10, start=.19707839, width=.07739878)
+
+. graph export "/Users/Ferniz/Documents/LSE /HP434/hist_HS.pdf", replace
+file /Users/Ferniz/Documents/LSE /HP434/hist_HS.pdf saved as PDF format
+
+. 
+. *mi extract 0, clear
+. *mi reset
+. *mi reset test_per_case ful_vac CFR ICU
+. 
+. 
+. xtset country quarter
+
+Panel variable: country (strongly balanced)
+ Time variable: quarter, 1 to 12
+         Delta: 1 unit
+
+. reg HS c.test_per_case c.ful_vac c.CFR c.ICU c.unempl c.CCI c.gov_resp
+
+      Source |       SS           df       MS      Number of obs   =        60
+-------------+----------------------------------   F(7, 52)        =      3.06
+       Model |  .261974663         7  .037424952   Prob > F        =    0.0090
+    Residual |  .636117487        52  .012233029   R-squared       =    0.2917
+-------------+----------------------------------   Adj R-squared   =    0.1964
+       Total |   .89809215        59  .015221901   Root MSE        =     .1106
+
+-------------------------------------------------------------------------------
+           HS | Coefficient  Std. err.      t    P>|t|     [95% conf. interval]
+--------------+----------------------------------------------------------------
+test_per_case |  -.0008737    .000348    -2.51   0.015     -.001572   -.0001754
+      ful_vac |  -.0003183   .0007294    -0.44   0.664     -.001782    .0011454
+          CFR |   .0226757   .0215052     1.05   0.297    -.0204776    .0658291
+          ICU |  -.0037437   .0009506    -3.94   0.000    -.0056511   -.0018363
+       unempl |   .0024695   .0036599     0.67   0.503    -.0048746    .0098136
+          CCI |   .0202427   .0086292     2.35   0.023     .0029269    .0375585
+     gov_resp |  -.0000807   .0013993    -0.06   0.954    -.0028886    .0027271
+        _cons |  -1.207004   .8049973    -1.50   0.140    -2.822349    .4083416
+-------------------------------------------------------------------------------
+
+. 
+. outreg2 using "HP434_Res.xlm"
+HP434_Res.xlm
+dir : seeout
+
+. 
+. predict yhat
+(option xb assumed; fitted values)
+
+. predict residual, residuals
+
+. 
+. pnorm residual
+
+. graph export "/Users/Ferniz/Documents/LSE /HP434/pnorm.pdf", replace
+file /Users/Ferniz/Documents/LSE /HP434/pnorm.pdf saved as PDF format
+
+. 
+. qnorm residual
+
+. graph export "/Users/Ferniz/Documents/LSE /HP434/qnorm.pdf", replace
+file /Users/Ferniz/Documents/LSE /HP434/qnorm.pdf saved as PDF format
+
+. 
+. *rvfplot, yline(0) title("Residual vs Fitted Plot") xtitle("Fitted Values") ytitle("Residuals") mcolo
+> r(blue)
+. *graph export "/Users/Ferniz/Documents/LSE /HP434/rfvplot.pdf", replace
+. 
+. 
+. twoway (scatter residual yhat, mcolor(blue) msize(small) msymbol(oh)) (function y=0, range(yhat) lcol
+> or(black) lpattern(solid) lwidth(thin)) (lfit residual yhat, lcolor(red) lpattern(dash) lwidth(medium
+> )), title("Residual vs Fitted Plot") xtitle("Fitted Values") ytitle("Residuals") legend(order(1 "Resi
+> duals" 2 "Zero Line" 3 "Fitted Line"))
+
+. graph export "/Users/Ferniz/Documents/LSE /HP434/twoway.pdf", replace      
+file /Users/Ferniz/Documents/LSE /HP434/twoway.pdf saved as PDF format
+
+.           
+.           
+. estat hettest
+
+Breusch–Pagan/Cook–Weisberg test for heteroskedasticity 
+Assumption: Normal error terms
+Variable: Fitted values of HS
+
+H0: Constant variance
+
+    chi2(1) =   9.52
+Prob > chi2 = 0.0020
+
+. /*
+> Since the p-value (0.0020) is less than the conventional significance levels (e.g., 0.05 or 0.01), we
+>  reject the null hypothesis of constant variance. This suggests the presence of heteroskedasticity in
+>  your regression model.
+> :*/
+. 
+. 
+. vif
+
+    Variable |       VIF       1/VIF  
+-------------+----------------------
+    gov_resp |      4.52    0.221376
+     ful_vac |      3.40    0.293865
+         ICU |      2.08    0.481073
+         CCI |      2.06    0.485999
+test_per_c~e |      1.95    0.513835
+         CFR |      1.59    0.630780
+      unempl |      1.06    0.947484
+-------------+----------------------
+    Mean VIF |      2.38
+
+. 
+. 
+. 
+. reg HS c.test_per_case c.ful_vac c.CFR c.ICU c.unempl c.CCI c.gov_resp, robust
+
+Linear regression                               Number of obs     =         60
+                                                F(7, 52)          =       3.05
+                                                Prob > F          =     0.0091
+                                                R-squared         =     0.2917
+                                                Root MSE          =      .1106
+
+-------------------------------------------------------------------------------
+              |               Robust
+           HS | Coefficient  std. err.      t    P>|t|     [95% conf. interval]
+--------------+----------------------------------------------------------------
+test_per_case |  -.0008737   .0003287    -2.66   0.010    -.0015332   -.0002142
+      ful_vac |  -.0003183   .0008057    -0.40   0.694     -.001935    .0012984
+          CFR |   .0226757   .0231765     0.98   0.332    -.0238313    .0691828
+          ICU |  -.0037437   .0011563    -3.24   0.002    -.0060641   -.0014233
+       unempl |   .0024695   .0039948     0.62   0.539    -.0055465    .0104856
+          CCI |   .0202427   .0086855     2.33   0.024     .0028141    .0376714
+     gov_resp |  -.0000807   .0013513    -0.06   0.953    -.0027923    .0026309
+        _cons |  -1.207004   .8023241    -1.50   0.139    -2.816985    .4029775
+-------------------------------------------------------------------------------
+
+. outreg2 using "HP434_Res.xlm"
+HP434_Res.xlm
+dir : seeout
+
+. 
+. vif
+
+    Variable |       VIF       1/VIF  
+-------------+----------------------
+    gov_resp |      4.52    0.221376
+     ful_vac |      3.40    0.293865
+         ICU |      2.08    0.481073
+         CCI |      2.06    0.485999
+test_per_c~e |      1.95    0.513835
+         CFR |      1.59    0.630780
+      unempl |      1.06    0.947484
+-------------+----------------------
+    Mean VIF |      2.38
+
+. 
+. 
+. *** PANEL DATA
+. xtset country quarter
+
+Panel variable: country (strongly balanced)
+ Time variable: quarter, 1 to 12
+         Delta: 1 unit
+
+. xtreg HS c.test_per_case c.ful_vac c.CFR c.ICU c.unempl c.CCI c.gov_resp, fe
+
+Fixed-effects (within) regression               Number of obs     =         60
+Group variable: country                         Number of groups  =          5
+
+R-squared:                                      Obs per group:
+     Within  = 0.4831                                         min =         12
+     Between = 0.2679                                         avg =       12.0
+     Overall = 0.0116                                         max =         12
+
+                                                F(7, 48)          =       6.41
+corr(u_i, Xb) = -0.9740                         Prob > F          =     0.0000
+
+-------------------------------------------------------------------------------
+           HS | Coefficient  Std. err.      t    P>|t|     [95% conf. interval]
+--------------+----------------------------------------------------------------
+test_per_case |  -.0008279   .0003149    -2.63   0.011     -.001461   -.0001948
+      ful_vac |   .0012656   .0007724     1.64   0.108    -.0002874    .0028187
+          CFR |   .0146169   .0194825     0.75   0.457    -.0245553    .0537891
+          ICU |   -.004172   .0009595    -4.35   0.000    -.0061011   -.0022428
+       unempl |   .0941781   .0245381     3.84   0.000      .044841    .1435152
+          CCI |   .0089346   .0084041     1.06   0.293    -.0079629    .0258321
+     gov_resp |   .0010772   .0014811     0.73   0.471    -.0019008    .0040551
+        _cons |  -.9126081   .7447198    -1.23   0.226    -2.409968    .5847514
+--------------+----------------------------------------------------------------
+      sigma_u |  .41680031
+      sigma_e |  .09789735
+          rho |  .94771654   (fraction of variance due to u_i)
+-------------------------------------------------------------------------------
+F test that all u_i=0: F(4, 48) = 4.59                       Prob > F = 0.0032
+
+. estimates store fixed
+
+. outreg2 using "HP434_Res.xlm"
+HP434_Res.xlm
+dir : seeout
+
+. 
+. 
+. 
+. xtreg HS c.test_per_case c.ful_vac c.CFR c.ICU c.unempl c.CCI c.gov_resp, re
+
+Random-effects GLS regression                   Number of obs     =         60
+Group variable: country                         Number of groups  =          5
+
+R-squared:                                      Obs per group:
+     Within  = 0.3248                                         min =         12
+     Between = 0.0069                                         avg =       12.0
+     Overall = 0.2917                                         max =         12
+
+                                                Wald chi2(7)      =      21.42
+corr(u_i, X) = 0 (assumed)                      Prob > chi2       =     0.0032
+
+-------------------------------------------------------------------------------
+           HS | Coefficient  Std. err.      z    P>|z|     [95% conf. interval]
+--------------+----------------------------------------------------------------
+test_per_case |  -.0008737    .000348    -2.51   0.012    -.0015557   -.0001917
+      ful_vac |  -.0003183   .0007294    -0.44   0.663    -.0017479    .0011113
+          CFR |   .0226757   .0215052     1.05   0.292    -.0194737    .0648252
+          ICU |  -.0037437   .0009506    -3.94   0.000    -.0056067   -.0018806
+       unempl |   .0024695   .0036599     0.67   0.500    -.0047037    .0096428
+          CCI |   .0202427   .0086292     2.35   0.019     .0033298    .0371557
+     gov_resp |  -.0000807   .0013993    -0.06   0.954    -.0028232    .0026618
+        _cons |  -1.207004   .8049973    -1.50   0.134    -2.784769     .370762
+--------------+----------------------------------------------------------------
+      sigma_u |          0
+      sigma_e |  .09789735
+          rho |          0   (fraction of variance due to u_i)
+-------------------------------------------------------------------------------
+
+. estimates store random
+
+. outreg2 using "HP434_Res.xlm"
+HP434_Res.xlm
+dir : seeout
+
+. 
+. hausman fixed random
+
+                 ---- Coefficients ----
+             |      (b)          (B)            (b-B)     sqrt(diag(V_b-V_B))
+             |     fixed        random       Difference       Std. err.
+-------------+----------------------------------------------------------------
+test_per_c~e |   -.0008279    -.0008737        .0000458               .
+     ful_vac |    .0012656    -.0003183        .0015839        .0002541
+         CFR |    .0146169     .0226757       -.0080588               .
+         ICU |    -.004172    -.0037437       -.0004283        .0001307
+      unempl |    .0941781     .0024695        .0917086        .0242636
+         CCI |    .0089346     .0202427       -.0113082               .
+    gov_resp |    .0010772    -.0000807        .0011579        .0004855
+------------------------------------------------------------------------------
+                          b = Consistent under H0 and Ha; obtained from xtreg.
+           B = Inconsistent under Ha, efficient under H0; obtained from xtreg.
+
+Test of H0: Difference in coefficients not systematic
+
+    chi2(7) = (b-B)'[(V_b-V_B)^(-1)](b-B)
+            =  18.62
+Prob > chi2 = 0.0095
+(V_b-V_B is not positive definite)
+
+. /* 
+> based on the Hausman test result, the fixed effects (FE) model is preferred over the random effects (
+> RE) model. The test rejects the null hypothesis (H0) that the difference in coefficients is not syste
+> matic, with a p-value of 0.0095 (Prob > chi2 = 0.0095), which is less than the conventional significa
+> nce level of 0.05.
+> 
+> Therefore, you should proceed with the fixed effects model and perform the diagnostic tests on the FE
+>  model.
+> P-value (Prob > chi2): The p-value associated with the test statistic is 0.0032.
+> Since the p-value (0.0032) is less than the conventional significance levels (e.g., 0.05 or 0.01), we
+>  reject the null hypothesis. This means that the difference in coefficients between the fixed-effects
+>  and random-effects models is systematic, and the fixed-effects model is preferred over the random-ef
+> fects model.*//
+/ is not a valid command name
+r(199);
+
+end of do-file
+
+r(199);
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. twoway (scatter residual yhat, mcolor(blue) msize(small) (function y=0, range(yhat) lcolor(black) lpa
+> ttern(solid) lwidth(thin)) (lfit residual yhat, lcolor(red) lpattern(dash) lwidth(medium)), title("Re
+> sidual vs Fitted Plot") xtitle("Fitted Values") ytitle("Residuals") legend(order(1 "Residuals" 2 "Zer
+> o Line" 3 "Fitted Line"))
+parentheses do not balance
+r(198);
+
+end of do-file
+
+r(198);
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. twoway (scatter residual yhat, mcolor(blue) msize(small) (function y=0, range(yhat) lcolor(black) lpa
+> ttern(solid) lwidth(thin)) (lfit residual yhat, lcolor(red) lpattern(dash) lwidth(medium)), title("Re
+> sidual vs Fitted Plot") xtitle("Fitted Values") ytitle("Residuals") legend(order(1 "Residuals" 2 "Zer
+> o Line" 3 "Fitted Line"))
+parentheses do not balance
+r(198);
+
+end of do-file
+
+r(198);
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. twoway (scatter residual yhat, mcolor(blue) msize(small) function y=0, range(yhat) lcolor(black) lpat
+> tern(solid) lwidth(thin)) (lfit residual yhat, lcolor(red) lpattern(dash) lwidth(medium)), title("Res
+> idual vs Fitted Plot") xtitle("Fitted Values") ytitle("Residuals") legend(order(1 "Residuals" 2 "Zero
+>  Line" 3 "Fitted Line"))
+range:  operator invalid
+r(198);
+
+end of do-file
+
+r(198);
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. twoway (scatter residual yhat, mcolor(blue) msize(small)) (function y=0, range(yhat) lcolor(black) lp
+> attern(solid) lwidth(thin)) (lfit residual yhat, lcolor(red) lpattern(dash) lwidth(medium)), title("R
+> esidual vs Fitted Plot") xtitle("Fitted Values") ytitle("Residuals") legend(order(1 "Residuals" 2 "Ze
+> ro Line" 3 "Fitted Line"))
+
+. 
+end of do-file
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. graph export "/Users/Ferniz/Documents/LSE /HP434/twoway.pdf", replace      
+file /Users/Ferniz/Documents/LSE /HP434/twoway.pdf saved as PDF format
+
+. 
+end of do-file
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. xtreg HS c.test_per_case c.ful_vac c.CFR c.ICU c.unempl c.CCI c.gov_resp, fe
+
+Fixed-effects (within) regression               Number of obs     =         60
+Group variable: country                         Number of groups  =          5
+
+R-squared:                                      Obs per group:
+     Within  = 0.4831                                         min =         12
+     Between = 0.2679                                         avg =       12.0
+     Overall = 0.0116                                         max =         12
+
+                                                F(7, 48)          =       6.41
+corr(u_i, Xb) = -0.9740                         Prob > F          =     0.0000
+
+-------------------------------------------------------------------------------
+           HS | Coefficient  Std. err.      t    P>|t|     [95% conf. interval]
+--------------+----------------------------------------------------------------
+test_per_case |  -.0008279   .0003149    -2.63   0.011     -.001461   -.0001948
+      ful_vac |   .0012656   .0007724     1.64   0.108    -.0002874    .0028187
+          CFR |   .0146169   .0194825     0.75   0.457    -.0245553    .0537891
+          ICU |   -.004172   .0009595    -4.35   0.000    -.0061011   -.0022428
+       unempl |   .0941781   .0245381     3.84   0.000      .044841    .1435152
+          CCI |   .0089346   .0084041     1.06   0.293    -.0079629    .0258321
+     gov_resp |   .0010772   .0014811     0.73   0.471    -.0019008    .0040551
+        _cons |  -.9126081   .7447198    -1.23   0.226    -2.409968    .5847514
+--------------+----------------------------------------------------------------
+      sigma_u |  .41680031
+      sigma_e |  .09789735
+          rho |  .94771654   (fraction of variance due to u_i)
+-------------------------------------------------------------------------------
+F test that all u_i=0: F(4, 48) = 4.59                       Prob > F = 0.0032
+
+. 
+end of do-file
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. predict residual, e
+variable residual already defined
+r(110);
+
+end of do-file
+
+r(110);
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. swilk residual
+
+                   Shapiro–Wilk W test for normal data
+
+    Variable |        Obs       W           V         z       Prob>z
+-------------+------------------------------------------------------
+    residual |         60    0.96330      1.995     1.489    0.06826
+
+. 
+end of do-file
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. histogram residual, normal
+(bin=7, start=-.35832766, width=.08599277)
+
+. 
+end of do-file
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. qnorm residual
+
+. 
+end of do-file
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. pnorm residual
+
+. 
+end of do-file
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. graph export "/Users/Ferniz/Documents/LSE /HP434/pnormfe.pdf", replace
+file /Users/Ferniz/Documents/LSE /HP434/pnormfe.pdf saved as PDF format
+
+. 
+end of do-file
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. vif
+not appropriate after regress, nocons;
+use option uncentered to get uncentered VIFs
+r(301);
+
+end of do-file
+
+r(301);
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. xttest3
+command xttest3 is unrecognized
+r(199);
+
+end of do-file
+
+r(199);
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. xtreg HS c.test_per_case c.ful_vac c.CFR c.ICU c.unempl c.CCI c.gov_resp, fe
+
+Fixed-effects (within) regression               Number of obs     =         60
+Group variable: country                         Number of groups  =          5
+
+R-squared:                                      Obs per group:
+     Within  = 0.4831                                         min =         12
+     Between = 0.2679                                         avg =       12.0
+     Overall = 0.0116                                         max =         12
+
+                                                F(7, 48)          =       6.41
+corr(u_i, Xb) = -0.9740                         Prob > F          =     0.0000
+
+-------------------------------------------------------------------------------
+           HS | Coefficient  Std. err.      t    P>|t|     [95% conf. interval]
+--------------+----------------------------------------------------------------
+test_per_case |  -.0008279   .0003149    -2.63   0.011     -.001461   -.0001948
+      ful_vac |   .0012656   .0007724     1.64   0.108    -.0002874    .0028187
+          CFR |   .0146169   .0194825     0.75   0.457    -.0245553    .0537891
+          ICU |   -.004172   .0009595    -4.35   0.000    -.0061011   -.0022428
+       unempl |   .0941781   .0245381     3.84   0.000      .044841    .1435152
+          CCI |   .0089346   .0084041     1.06   0.293    -.0079629    .0258321
+     gov_resp |   .0010772   .0014811     0.73   0.471    -.0019008    .0040551
+        _cons |  -.9126081   .7447198    -1.23   0.226    -2.409968    .5847514
+--------------+----------------------------------------------------------------
+      sigma_u |  .41680031
+      sigma_e |  .09789735
+          rho |  .94771654   (fraction of variance due to u_i)
+-------------------------------------------------------------------------------
+F test that all u_i=0: F(4, 48) = 4.59                       Prob > F = 0.0032
+
+. 
+end of do-file
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. xttest3
+command xttest3 is unrecognized
+r(199);
+
+end of do-file
+
+r(199);
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. xttest0
+last estimates not xtreg, re
+r(301);
+
+end of do-file
+
+r(301);
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. ssc install xttest3
+checking xttest3 consistency and verifying not already installed...
+installing into /Users/Ferniz/Library/Application Support/Stata/ado/plus/...
+installation complete.
+
+. 
+end of do-file
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. xttest3
+
+Modified Wald test for groupwise heteroskedasticity
+in fixed effect regression model
+
+H0: sigma(i)^2 = sigma^2 for all i
+
+chi2 (5)  =       19.45
+Prob>chi2 =      0.0016
+
+
+. 
+end of do-file
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. xtset country quarter
+
+Panel variable: country (strongly balanced)
+ Time variable: quarter, 1 to 12
+         Delta: 1 unit
+
+. 
+. * Create dummy variables for each country
+. tab country, gen(country_dummy)
+
+    country |      Freq.     Percent        Cum.
+------------+-----------------------------------
+     France |         12       20.00       20.00
+      Italy |         12       20.00       40.00
+         UK |         12       20.00       60.00
+    Germany |         12       20.00       80.00
+      Spain |         12       20.00      100.00
+------------+-----------------------------------
+      Total |         60      100.00
+
+. 
+. * Create interaction terms for each country and explanatory variable
+. forvalues i = 1/5 {
+  2.     gen int_test_per_case_`i' = country_dummy`i' * test_per_case
+  3.     gen int_ful_vac_`i' = country_dummy`i' * ful_vac
+  4.     gen int_CFR_`i' = country_dummy`i' * CFR
+  5.     gen int_ICU_`i' = country_dummy`i' * ICU
+  6.     gen int_unempl_`i' = country_dummy`i' * unempl
+  7.     gen int_CCI_`i' = country_dummy`i' * CCI
+  8.     gen int_gov_resp_`i' = country_dummy`i' * gov_resp
+  9. 
+unexpected end of file
+r(612);
+
+end of do-file
+
+r(612);
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. reg HS country_dummy2-country_dummy5 c.test_per_case c.ful_vac c.CFR c.ICU c.unempl c.CCI c.gov_resp 
+> int_test_per_case_2-int_test_per_case_5 int_ful_vac_2-int_ful_vac_5 int_CFR_2-int_CFR_5 int_ICU_2-int
+> _ICU_5 int_unempl_2-int_unempl_5 int_CCI_2-int_CCI_5 int_gov_resp_2-int_gov_resp_5
+variable int_test_per_case_2 not found
+r(111);
+
+end of do-file
+
+r(111);
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. clear all
+
+. 
+end of do-file
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. use HP434.dta, clear
+
+. 
+end of do-file
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. egen EM_min = min(EM)
+
+. egen EM_max = max(EM)
+
+. gen EM_norm = (EM - EM_min) / (EM_max - EM_min)
+
+. gen EM_inv = 1 - EM_norm
+
+. egen GDP_min = min(GDP)
+
+. egen GDP_max = max(GDP)
+
+. gen GDP_norm = (GDP - GDP_min) / (GDP_max - GDP_min)
+
+. gen HS = (EM_inv + GDP_norm) / 2
+
+. sum HS
+
+    Variable |        Obs        Mean    Std. dev.       Min        Max
+-------------+---------------------------------------------------------
+          HS |         60    .7037025    .1233771   .1970784   .9710662
+
+. 
+end of do-file
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. xtset country quarter
+
+Panel variable: country (strongly balanced)
+ Time variable: quarter, 1 to 12
+         Delta: 1 unit
+
+. 
+. * Create dummy variables for each country
+. tab country, gen(country_dummy)
+
+    country |      Freq.     Percent        Cum.
+------------+-----------------------------------
+     France |         12       20.00       20.00
+      Italy |         12       20.00       40.00
+         UK |         12       20.00       60.00
+    Germany |         12       20.00       80.00
+      Spain |         12       20.00      100.00
+------------+-----------------------------------
+      Total |         60      100.00
+
+. 
+end of do-file
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. * Create interaction terms for each country and explanatory variable
+. forvalues i = 1/5 {
+  2.     gen int_test_per_case_`i' = country_dummy`i' * test_per_case
+  3.     gen int_ful_vac_`i' = country_dummy`i' * ful_vac
+  4.     gen int_CFR_`i' = country_dummy`i' * CFR
+  5.     gen int_ICU_`i' = country_dummy`i' * ICU
+  6.     gen int_unempl_`i' = country_dummy`i' * unempl
+  7.     gen int_CCI_`i' = country_dummy`i' * CCI
+  8.     gen int_gov_resp_`i' = country_dummy`i' * gov_resp
+  9. }
+
+. 
+end of do-file
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. reg HS country_dummy2-country_dummy5 c.test_per_case c.ful_vac c.CFR c.ICU c.unempl c.CCI c.gov_resp 
+> int_test_per_case_2-int_test_per_case_5 int_ful_vac_2-int_ful_vac_5 int_CFR_2-int_CFR_5 int_ICU_2-int
+> _ICU_5 int_unempl_2-int_unempl_5 int_CCI_2-int_CCI_5 int_gov_resp_2-int_gov_resp_5
+note: int_CFR_2 omitted because of collinearity.
+note: int_unempl_2 omitted because of collinearity.
+note: int_gov_resp_2 omitted because of collinearity.
+note: int_CFR_3 omitted because of collinearity.
+note: int_ICU_3 omitted because of collinearity.
+note: int_unempl_3 omitted because of collinearity.
+note: int_gov_resp_3 omitted because of collinearity.
+note: int_CFR_4 omitted because of collinearity.
+note: int_unempl_4 omitted because of collinearity.
+note: int_ful_vac_2 omitted because of collinearity.
+note: int_CFR_2 omitted because of collinearity.
+note: int_ICU_2 omitted because of collinearity.
+note: int_CCI_2 omitted because of collinearity.
+note: int_gov_resp_2 omitted because of collinearity.
+note: int_test_per_case_3 omitted because of collinearity.
+note: int_ful_vac_3 omitted because of collinearity.
+note: int_CFR_3 omitted because of collinearity.
+note: int_unempl_3 omitted because of collinearity.
+note: int_CCI_3 omitted because of collinearity.
+note: int_gov_resp_3 omitted because of collinearity.
+note: int_test_per_case_4 omitted because of collinearity.
+note: int_ful_vac_4 omitted because of collinearity.
+note: int_CFR_4 omitted because of collinearity.
+note: int_ICU_4 omitted because of collinearity.
+note: int_unempl_4 omitted because of collinearity.
+note: int_CCI_4 omitted because of collinearity.
+note: int_gov_resp_4 omitted because of collinearity.
+note: int_test_per_case_5 omitted because of collinearity.
+note: int_ICU_2 omitted because of collinearity.
+note: int_unempl_2 omitted because of collinearity.
+note: int_CCI_2 omitted because of collinearity.
+note: int_gov_resp_2 omitted because of collinearity.
+note: int_test_per_case_3 omitted because of collinearity.
+note: int_ful_vac_3 omitted because of collinearity.
+note: int_ICU_3 omitted because of collinearity.
+note: int_unempl_3 omitted because of collinearity.
+note: int_CCI_3 omitted because of collinearity.
+note: int_gov_resp_3 omitted because of collinearity.
+note: int_test_per_case_4 omitted because of collinearity.
+note: int_ful_vac_4 omitted because of collinearity.
+note: int_CFR_4 omitted because of collinearity.
+note: int_ICU_4 omitted because of collinearity.
+note: int_unempl_4 omitted because of collinearity.
+note: int_CCI_4 omitted because of collinearity.
+note: int_gov_resp_4 omitted because of collinearity.
+note: int_test_per_case_5 omitted because of collinearity.
+note: int_ful_vac_5 omitted because of collinearity.
+note: int_CFR_5 omitted because of collinearity.
+note: int_ICU_2 omitted because of collinearity.
+note: int_unempl_2 omitted because of collinearity.
+note: int_CCI_2 omitted because of collinearity.
+note: int_gov_resp_2 omitted because of collinearity.
+note: int_test_per_case_3 omitted because of collinearity.
+note: int_ful_vac_3 omitted because of collinearity.
+note: int_CFR_3 omitted because of collinearity.
+note: int_ICU_3 omitted because of collinearity.
+note: int_unempl_3 omitted because of collinearity.
+note: int_CCI_3 omitted because of collinearity.
+note: int_gov_resp_3 omitted because of collinearity.
+note: int_test_per_case_4 omitted because of collinearity.
+note: int_ful_vac_4 omitted because of collinearity.
+note: int_CFR_4 omitted because of collinearity.
+note: int_ICU_4 omitted because of collinearity.
+note: int_unempl_4 omitted because of collinearity.
+note: int_CCI_4 omitted because of collinearity.
+note: int_gov_resp_4 omitted because of collinearity.
+note: int_test_per_case_5 omitted because of collinearity.
+note: int_ful_vac_5 omitted because of collinearity.
+note: int_CFR_5 omitted because of collinearity.
+note: int_unempl_2 omitted because of collinearity.
+note: int_CCI_2 omitted because of collinearity.
+note: int_gov_resp_2 omitted because of collinearity.
+note: int_test_per_case_3 omitted because of collinearity.
+note: int_ful_vac_3 omitted because of collinearity.
+note: int_CFR_3 omitted because of collinearity.
+note: int_ICU_3 omitted because of collinearity.
+note: int_unempl_3 omitted because of collinearity.
+note: int_CCI_3 omitted because of collinearity.
+note: int_gov_resp_3 omitted because of collinearity.
+note: int_test_per_case_4 omitted because of collinearity.
+note: int_ful_vac_4 omitted because of collinearity.
+note: int_CFR_4 omitted because of collinearity.
+note: int_ICU_4 omitted because of collinearity.
+note: int_unempl_4 omitted because of collinearity.
+note: int_CCI_4 omitted because of collinearity.
+note: int_gov_resp_4 omitted because of collinearity.
+note: int_test_per_case_5 omitted because of collinearity.
+note: int_ful_vac_5 omitted because of collinearity.
+note: int_CFR_5 omitted because of collinearity.
+note: int_ICU_5 omitted because of collinearity.
+note: int_unempl_5 omitted because of collinearity.
+note: int_CCI_2 omitted because of collinearity.
+note: int_gov_resp_2 omitted because of collinearity.
+note: int_test_per_case_3 omitted because of collinearity.
+note: int_ful_vac_3 omitted because of collinearity.
+note: int_CFR_3 omitted because of collinearity.
+note: int_ICU_3 omitted because of collinearity.
+note: int_unempl_3 omitted because of collinearity.
+note: int_CCI_3 omitted because of collinearity.
+note: int_gov_resp_3 omitted because of collinearity.
+note: int_test_per_case_4 omitted because of collinearity.
+note: int_ful_vac_4 omitted because of collinearity.
+note: int_CFR_4 omitted because of collinearity.
+note: int_ICU_4 omitted because of collinearity.
+note: int_unempl_4 omitted because of collinearity.
+note: int_CCI_4 omitted because of collinearity.
+note: int_gov_resp_4 omitted because of collinearity.
+note: int_test_per_case_5 omitted because of collinearity.
+note: int_ful_vac_5 omitted because of collinearity.
+note: int_CFR_5 omitted because of collinearity.
+note: int_ICU_5 omitted because of collinearity.
+note: int_unempl_5 omitted because of collinearity.
+note: int_test_per_case_3 omitted because of collinearity.
+note: int_ful_vac_3 omitted because of collinearity.
+note: int_CFR_3 omitted because of collinearity.
+note: int_ICU_3 omitted because of collinearity.
+note: int_CCI_3 omitted because of collinearity.
+note: int_test_per_case_4 omitted because of collinearity.
+note: int_ful_vac_4 omitted because of collinearity.
+note: int_ICU_4 omitted because of collinearity.
+note: int_CCI_4 omitted because of collinearity.
+note: int_gov_resp_4 omitted because of collinearity.
+note: int_test_per_case_5 omitted because of collinearity.
+note: int_ful_vac_5 omitted because of collinearity.
+note: int_ICU_5 omitted because of collinearity.
+note: int_CCI_5 omitted because of collinearity.
+
+      Source |       SS           df       MS      Number of obs   =        60
+-------------+----------------------------------   F(39, 20)       =      7.50
+       Model |  .840620873        39  .021554381   Prob > F        =    0.0000
+    Residual |  .057471277        20  .002873564   R-squared       =    0.9360
+-------------+----------------------------------   Adj R-squared   =    0.8112
+       Total |   .89809215        59  .015221901   Root MSE        =    .05361
+
+-------------------------------------------------------------------------------------
+                 HS | Coefficient  Std. err.      t    P>|t|     [95% conf. interval]
+--------------------+----------------------------------------------------------------
+     country_dummy2 |   4.253866   3.456541     1.23   0.233    -2.956352    11.46408
+     country_dummy3 |   3.209552   3.213633     1.00   0.330     -3.49397    9.913074
+     country_dummy4 |   4.833198   3.549558     1.36   0.188    -2.571051    12.23745
+     country_dummy5 |   4.118005   3.244543     1.27   0.219    -2.649993      10.886
+      test_per_case |  -.0010188   .0011209    -0.91   0.374    -.0033569    .0013194
+            ful_vac |   .0009961   .0014163     0.70   0.490    -.0019582    .0039504
+                CFR |  -.0035446   .0196533    -0.18   0.859    -.0445407    .0374515
+                ICU |  -.0023664   .0016956    -1.40   0.178    -.0059034    .0011707
+             unempl |    .252987   .0663611     3.81   0.001     .1145603    .3914137
+                CCI |   .0329789   .0365321     0.90   0.377    -.0432257    .1091836
+           gov_resp |  -.0023067   .0040523    -0.57   0.576    -.0107596    .0061461
+int_test_per_case_2 |   .0003486   .0011803     0.30   0.771    -.0021135    .0028107
+      int_ful_vac_2 |   .0004866   .0017821     0.27   0.788    -.0032309     .004204
+          int_CFR_2 |          0  (omitted)
+          int_ICU_2 |  -.0029354   .0021975    -1.34   0.197    -.0075194    .0016486
+       int_unempl_2 |          0  (omitted)
+          int_CCI_2 |  -.0419549   .0408812    -1.03   0.317    -.1272316    .0433219
+     int_gov_resp_2 |          0  (omitted)
+int_test_per_case_3 |    .000489   .0011911     0.41   0.686    -.0019955    .0029735
+      int_ful_vac_3 |  -.0045624   .0019215    -2.37   0.028    -.0085705   -.0005542
+          int_CFR_3 |          0  (omitted)
+          int_ICU_3 |          0  (omitted)
+       int_unempl_3 |          0  (omitted)
+          int_CCI_3 |  -.0213654   .0376797    -0.57   0.577     -.099964    .0572331
+     int_gov_resp_3 |          0  (omitted)
+int_test_per_case_4 |    .000145   .0013305     0.11   0.914    -.0026303    .0029203
+      int_ful_vac_4 |  -.0018386   .0022478    -0.82   0.423    -.0065275    .0028503
+          int_CFR_4 |          0  (omitted)
+          int_ICU_4 |   .0035954    .003028     1.19   0.249    -.0027208    .0099116
+       int_unempl_4 |          0  (omitted)
+          int_CCI_4 |  -.0428371   .0415828    -1.03   0.315    -.1295772     .043903
+     int_gov_resp_4 |   .0012994   .0046603     0.28   0.783    -.0084219    .0110207
+int_test_per_case_5 |     -.0027   .0016582    -1.63   0.119    -.0061591     .000759
+      int_ful_vac_2 |          0  (omitted)
+          int_CFR_2 |          0  (omitted)
+          int_ICU_2 |          0  (omitted)
+       int_unempl_2 |  -.0440328   .0840154    -0.52   0.606    -.2192859    .1312204
+          int_CCI_2 |          0  (omitted)
+     int_gov_resp_2 |          0  (omitted)
+int_test_per_case_3 |          0  (omitted)
+      int_ful_vac_3 |          0  (omitted)
+          int_CFR_3 |          0  (omitted)
+          int_ICU_3 |  -.0004666   .0035707    -0.13   0.897    -.0079149    .0069817
+       int_unempl_3 |          0  (omitted)
+          int_CCI_3 |          0  (omitted)
+     int_gov_resp_3 |          0  (omitted)
+int_test_per_case_4 |          0  (omitted)
+      int_ful_vac_4 |          0  (omitted)
+          int_CFR_4 |          0  (omitted)
+          int_ICU_4 |          0  (omitted)
+       int_unempl_4 |          0  (omitted)
+          int_CCI_4 |          0  (omitted)
+     int_gov_resp_4 |          0  (omitted)
+int_test_per_case_5 |          0  (omitted)
+      int_ful_vac_5 |   .0065159   .0021291     3.06   0.006     .0020748     .010957
+          int_CFR_2 |   .0292162   .0407752     0.72   0.482    -.0558393    .1142717
+          int_ICU_2 |          0  (omitted)
+       int_unempl_2 |          0  (omitted)
+          int_CCI_2 |          0  (omitted)
+     int_gov_resp_2 |          0  (omitted)
+int_test_per_case_3 |          0  (omitted)
+      int_ful_vac_3 |          0  (omitted)
+          int_CFR_3 |  -.1170419   .0394963    -2.96   0.008    -.1994297    -.034654
+          int_ICU_3 |          0  (omitted)
+       int_unempl_3 |          0  (omitted)
+          int_CCI_3 |          0  (omitted)
+     int_gov_resp_3 |          0  (omitted)
+int_test_per_case_4 |          0  (omitted)
+      int_ful_vac_4 |          0  (omitted)
+          int_CFR_4 |          0  (omitted)
+          int_ICU_4 |          0  (omitted)
+       int_unempl_4 |          0  (omitted)
+          int_CCI_4 |          0  (omitted)
+     int_gov_resp_4 |          0  (omitted)
+int_test_per_case_5 |          0  (omitted)
+      int_ful_vac_5 |          0  (omitted)
+          int_CFR_5 |          0  (omitted)
+          int_ICU_2 |          0  (omitted)
+       int_unempl_2 |          0  (omitted)
+          int_CCI_2 |          0  (omitted)
+     int_gov_resp_2 |          0  (omitted)
+int_test_per_case_3 |          0  (omitted)
+      int_ful_vac_3 |          0  (omitted)
+          int_CFR_3 |          0  (omitted)
+          int_ICU_3 |          0  (omitted)
+       int_unempl_3 |          0  (omitted)
+          int_CCI_3 |          0  (omitted)
+     int_gov_resp_3 |          0  (omitted)
+int_test_per_case_4 |          0  (omitted)
+      int_ful_vac_4 |          0  (omitted)
+          int_CFR_4 |          0  (omitted)
+          int_ICU_4 |          0  (omitted)
+       int_unempl_4 |          0  (omitted)
+          int_CCI_4 |          0  (omitted)
+     int_gov_resp_4 |          0  (omitted)
+int_test_per_case_5 |          0  (omitted)
+      int_ful_vac_5 |          0  (omitted)
+          int_CFR_5 |          0  (omitted)
+          int_ICU_5 |   .0030918   .0032589     0.95   0.354    -.0037062    .0098899
+       int_unempl_2 |          0  (omitted)
+          int_CCI_2 |          0  (omitted)
+     int_gov_resp_2 |          0  (omitted)
+int_test_per_case_3 |          0  (omitted)
+      int_ful_vac_3 |          0  (omitted)
+          int_CFR_3 |          0  (omitted)
+          int_ICU_3 |          0  (omitted)
+       int_unempl_3 |          0  (omitted)
+          int_CCI_3 |          0  (omitted)
+     int_gov_resp_3 |          0  (omitted)
+int_test_per_case_4 |          0  (omitted)
+      int_ful_vac_4 |          0  (omitted)
+          int_CFR_4 |          0  (omitted)
+          int_ICU_4 |          0  (omitted)
+       int_unempl_4 |          0  (omitted)
+          int_CCI_4 |          0  (omitted)
+     int_gov_resp_4 |          0  (omitted)
+int_test_per_case_5 |          0  (omitted)
+      int_ful_vac_5 |          0  (omitted)
+          int_CFR_5 |          0  (omitted)
+          int_ICU_5 |          0  (omitted)
+       int_unempl_5 |          0  (omitted)
+          int_CCI_2 |          0  (omitted)
+     int_gov_resp_2 |          0  (omitted)
+int_test_per_case_3 |          0  (omitted)
+      int_ful_vac_3 |          0  (omitted)
+          int_CFR_3 |          0  (omitted)
+          int_ICU_3 |          0  (omitted)
+       int_unempl_3 |          0  (omitted)
+          int_CCI_3 |          0  (omitted)
+     int_gov_resp_3 |          0  (omitted)
+int_test_per_case_4 |          0  (omitted)
+      int_ful_vac_4 |          0  (omitted)
+          int_CFR_4 |          0  (omitted)
+          int_ICU_4 |          0  (omitted)
+       int_unempl_4 |          0  (omitted)
+          int_CCI_4 |          0  (omitted)
+     int_gov_resp_4 |          0  (omitted)
+int_test_per_case_5 |          0  (omitted)
+      int_ful_vac_5 |          0  (omitted)
+          int_CFR_5 |          0  (omitted)
+          int_ICU_5 |          0  (omitted)
+       int_unempl_5 |          0  (omitted)
+          int_CCI_5 |   -.063333   .0388289    -1.63   0.119    -.1443288    .0176627
+     int_gov_resp_2 |  -.0003011   .0052741    -0.06   0.955    -.0113027    .0107005
+int_test_per_case_3 |          0  (omitted)
+      int_ful_vac_3 |          0  (omitted)
+          int_CFR_3 |          0  (omitted)
+          int_ICU_3 |          0  (omitted)
+       int_unempl_3 |    .106408   .0954735     1.11   0.278    -.0927462    .3055622
+          int_CCI_3 |          0  (omitted)
+     int_gov_resp_3 |  -.0076138   .0052038    -1.46   0.159    -.0184687    .0032411
+int_test_per_case_4 |          0  (omitted)
+      int_ful_vac_4 |          0  (omitted)
+          int_CFR_4 |   -.142245   .0640918    -2.22   0.038    -.2759381   -.0085519
+          int_ICU_4 |          0  (omitted)
+       int_unempl_4 |   .1487003   .1419308     1.05   0.307    -.1473621    .4447626
+          int_CCI_4 |          0  (omitted)
+     int_gov_resp_4 |          0  (omitted)
+int_test_per_case_5 |          0  (omitted)
+      int_ful_vac_5 |          0  (omitted)
+          int_CFR_5 |   .0111165   .0489222     0.23   0.823    -.0909334    .1131665
+          int_ICU_5 |          0  (omitted)
+       int_unempl_5 |   -.003532   .0784177    -0.05   0.965    -.1671086    .1600445
+          int_CCI_5 |          0  (omitted)
+     int_gov_resp_5 |   .0012336   .0047421     0.26   0.797    -.0086583    .0111255
+              _cons |  -4.324207   3.107048    -1.39   0.179     -10.8054    2.156982
+-------------------------------------------------------------------------------------
+
+. 
+end of do-file
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. reg HS country_dummy2-country_dummy5 c.test_per_case c.ful_vac c.CFR c.ICU c.unempl c.CCI c.gov_resp 
+> int_test_per_case_2-int_test_per_case_5 int_ful_vac_2-int_ful_vac_5 int_CFR_2-int_CFR_5 int_ICU_2-int
+> _ICU_5 int_unempl_2-int_unempl_5 int_CCI_2-int_CCI_5 int_gov_resp_2-int_gov_resp_5, robust
+note: int_CFR_2 omitted because of collinearity.
+note: int_unempl_2 omitted because of collinearity.
+note: int_gov_resp_2 omitted because of collinearity.
+note: int_CFR_3 omitted because of collinearity.
+note: int_ICU_3 omitted because of collinearity.
+note: int_unempl_3 omitted because of collinearity.
+note: int_gov_resp_3 omitted because of collinearity.
+note: int_CFR_4 omitted because of collinearity.
+note: int_unempl_4 omitted because of collinearity.
+note: int_ful_vac_2 omitted because of collinearity.
+note: int_CFR_2 omitted because of collinearity.
+note: int_ICU_2 omitted because of collinearity.
+note: int_CCI_2 omitted because of collinearity.
+note: int_gov_resp_2 omitted because of collinearity.
+note: int_test_per_case_3 omitted because of collinearity.
+note: int_ful_vac_3 omitted because of collinearity.
+note: int_CFR_3 omitted because of collinearity.
+note: int_unempl_3 omitted because of collinearity.
+note: int_CCI_3 omitted because of collinearity.
+note: int_gov_resp_3 omitted because of collinearity.
+note: int_test_per_case_4 omitted because of collinearity.
+note: int_ful_vac_4 omitted because of collinearity.
+note: int_CFR_4 omitted because of collinearity.
+note: int_ICU_4 omitted because of collinearity.
+note: int_unempl_4 omitted because of collinearity.
+note: int_CCI_4 omitted because of collinearity.
+note: int_gov_resp_4 omitted because of collinearity.
+note: int_test_per_case_5 omitted because of collinearity.
+note: int_ICU_2 omitted because of collinearity.
+note: int_unempl_2 omitted because of collinearity.
+note: int_CCI_2 omitted because of collinearity.
+note: int_gov_resp_2 omitted because of collinearity.
+note: int_test_per_case_3 omitted because of collinearity.
+note: int_ful_vac_3 omitted because of collinearity.
+note: int_ICU_3 omitted because of collinearity.
+note: int_unempl_3 omitted because of collinearity.
+note: int_CCI_3 omitted because of collinearity.
+note: int_gov_resp_3 omitted because of collinearity.
+note: int_test_per_case_4 omitted because of collinearity.
+note: int_ful_vac_4 omitted because of collinearity.
+note: int_CFR_4 omitted because of collinearity.
+note: int_ICU_4 omitted because of collinearity.
+note: int_unempl_4 omitted because of collinearity.
+note: int_CCI_4 omitted because of collinearity.
+note: int_gov_resp_4 omitted because of collinearity.
+note: int_test_per_case_5 omitted because of collinearity.
+note: int_ful_vac_5 omitted because of collinearity.
+note: int_CFR_5 omitted because of collinearity.
+note: int_ICU_2 omitted because of collinearity.
+note: int_unempl_2 omitted because of collinearity.
+note: int_CCI_2 omitted because of collinearity.
+note: int_gov_resp_2 omitted because of collinearity.
+note: int_test_per_case_3 omitted because of collinearity.
+note: int_ful_vac_3 omitted because of collinearity.
+note: int_CFR_3 omitted because of collinearity.
+note: int_ICU_3 omitted because of collinearity.
+note: int_unempl_3 omitted because of collinearity.
+note: int_CCI_3 omitted because of collinearity.
+note: int_gov_resp_3 omitted because of collinearity.
+note: int_test_per_case_4 omitted because of collinearity.
+note: int_ful_vac_4 omitted because of collinearity.
+note: int_CFR_4 omitted because of collinearity.
+note: int_ICU_4 omitted because of collinearity.
+note: int_unempl_4 omitted because of collinearity.
+note: int_CCI_4 omitted because of collinearity.
+note: int_gov_resp_4 omitted because of collinearity.
+note: int_test_per_case_5 omitted because of collinearity.
+note: int_ful_vac_5 omitted because of collinearity.
+note: int_CFR_5 omitted because of collinearity.
+note: int_unempl_2 omitted because of collinearity.
+note: int_CCI_2 omitted because of collinearity.
+note: int_gov_resp_2 omitted because of collinearity.
+note: int_test_per_case_3 omitted because of collinearity.
+note: int_ful_vac_3 omitted because of collinearity.
+note: int_CFR_3 omitted because of collinearity.
+note: int_ICU_3 omitted because of collinearity.
+note: int_unempl_3 omitted because of collinearity.
+note: int_CCI_3 omitted because of collinearity.
+note: int_gov_resp_3 omitted because of collinearity.
+note: int_test_per_case_4 omitted because of collinearity.
+note: int_ful_vac_4 omitted because of collinearity.
+note: int_CFR_4 omitted because of collinearity.
+note: int_ICU_4 omitted because of collinearity.
+note: int_unempl_4 omitted because of collinearity.
+note: int_CCI_4 omitted because of collinearity.
+note: int_gov_resp_4 omitted because of collinearity.
+note: int_test_per_case_5 omitted because of collinearity.
+note: int_ful_vac_5 omitted because of collinearity.
+note: int_CFR_5 omitted because of collinearity.
+note: int_ICU_5 omitted because of collinearity.
+note: int_unempl_5 omitted because of collinearity.
+note: int_CCI_2 omitted because of collinearity.
+note: int_gov_resp_2 omitted because of collinearity.
+note: int_test_per_case_3 omitted because of collinearity.
+note: int_ful_vac_3 omitted because of collinearity.
+note: int_CFR_3 omitted because of collinearity.
+note: int_ICU_3 omitted because of collinearity.
+note: int_unempl_3 omitted because of collinearity.
+note: int_CCI_3 omitted because of collinearity.
+note: int_gov_resp_3 omitted because of collinearity.
+note: int_test_per_case_4 omitted because of collinearity.
+note: int_ful_vac_4 omitted because of collinearity.
+note: int_CFR_4 omitted because of collinearity.
+note: int_ICU_4 omitted because of collinearity.
+note: int_unempl_4 omitted because of collinearity.
+note: int_CCI_4 omitted because of collinearity.
+note: int_gov_resp_4 omitted because of collinearity.
+note: int_test_per_case_5 omitted because of collinearity.
+note: int_ful_vac_5 omitted because of collinearity.
+note: int_CFR_5 omitted because of collinearity.
+note: int_ICU_5 omitted because of collinearity.
+note: int_unempl_5 omitted because of collinearity.
+note: int_test_per_case_3 omitted because of collinearity.
+note: int_ful_vac_3 omitted because of collinearity.
+note: int_CFR_3 omitted because of collinearity.
+note: int_ICU_3 omitted because of collinearity.
+note: int_CCI_3 omitted because of collinearity.
+note: int_test_per_case_4 omitted because of collinearity.
+note: int_ful_vac_4 omitted because of collinearity.
+note: int_ICU_4 omitted because of collinearity.
+note: int_CCI_4 omitted because of collinearity.
+note: int_gov_resp_4 omitted because of collinearity.
+note: int_test_per_case_5 omitted because of collinearity.
+note: int_ful_vac_5 omitted because of collinearity.
+note: int_ICU_5 omitted because of collinearity.
+note: int_CCI_5 omitted because of collinearity.
+
+Linear regression                               Number of obs     =         60
+                                                F(39, 20)         =     209.93
+                                                Prob > F          =     0.0000
+                                                R-squared         =     0.9360
+                                                Root MSE          =     .05361
+
+-------------------------------------------------------------------------------------
+                    |               Robust
+                 HS | Coefficient  std. err.      t    P>|t|     [95% conf. interval]
+--------------------+----------------------------------------------------------------
+     country_dummy2 |   4.253866   .8767084     4.85   0.000     2.425084    6.082648
+     country_dummy3 |   3.209552    1.26232     2.54   0.019     .5763981    5.842706
+     country_dummy4 |   4.833198    1.05578     4.58   0.000     2.630878    7.035517
+     country_dummy5 |   4.118005   1.645485     2.50   0.021     .6855841    7.550427
+      test_per_case |  -.0010188   .0003125    -3.26   0.004    -.0016708   -.0003668
+            ful_vac |   .0009961    .000704     1.41   0.172    -.0004725    .0024647
+                CFR |  -.0035446   .0055182    -0.64   0.528    -.0150554    .0079662
+                ICU |  -.0023664   .0014039    -1.69   0.107    -.0052949    .0005621
+             unempl |    .252987   .0172613    14.66   0.000     .2169805    .2889935
+                CCI |   .0329789   .0096921     3.40   0.003     .0127614    .0531964
+           gov_resp |  -.0023067   .0036749    -0.63   0.537    -.0099725     .005359
+int_test_per_case_2 |   .0003486   .0003276     1.06   0.300    -.0003348    .0010321
+      int_ful_vac_2 |   .0004866   .0007672     0.63   0.533    -.0011137    .0020868
+          int_CFR_2 |          0  (omitted)
+          int_ICU_2 |  -.0029354   .0014806    -1.98   0.061    -.0060239    .0001531
+       int_unempl_2 |          0  (omitted)
+          int_CCI_2 |  -.0419549   .0105971    -3.96   0.001      -.06406   -.0198498
+     int_gov_resp_2 |          0  (omitted)
+int_test_per_case_3 |    .000489   .0004693     1.04   0.310    -.0004899    .0014679
+      int_ful_vac_3 |  -.0045624   .0010922    -4.18   0.000    -.0068407    -.002284
+          int_CFR_3 |          0  (omitted)
+          int_ICU_3 |          0  (omitted)
+       int_unempl_3 |          0  (omitted)
+          int_CCI_3 |  -.0213654   .0147387    -1.45   0.163    -.0521098     .009379
+     int_gov_resp_3 |          0  (omitted)
+int_test_per_case_4 |    .000145   .0004194     0.35   0.733    -.0007299    .0010198
+      int_ful_vac_4 |  -.0018386   .0011123    -1.65   0.114    -.0041589    .0004817
+          int_CFR_4 |          0  (omitted)
+          int_ICU_4 |   .0035954   .0016203     2.22   0.038     .0002155    .0069753
+       int_unempl_4 |          0  (omitted)
+          int_CCI_4 |  -.0428371   .0132104    -3.24   0.004    -.0703934   -.0152808
+     int_gov_resp_4 |   .0012994   .0038812     0.33   0.741    -.0067966    .0093953
+int_test_per_case_5 |     -.0027   .0021881    -1.23   0.232    -.0072644    .0018643
+      int_ful_vac_2 |          0  (omitted)
+          int_CFR_2 |          0  (omitted)
+          int_ICU_2 |          0  (omitted)
+       int_unempl_2 |  -.0440328   .0239503    -1.84   0.081    -.0939922    .0059267
+          int_CCI_2 |          0  (omitted)
+     int_gov_resp_2 |          0  (omitted)
+int_test_per_case_3 |          0  (omitted)
+      int_ful_vac_3 |          0  (omitted)
+          int_CFR_3 |          0  (omitted)
+          int_ICU_3 |  -.0004666   .0028155    -0.17   0.870    -.0063397    .0054065
+       int_unempl_3 |          0  (omitted)
+          int_CCI_3 |          0  (omitted)
+     int_gov_resp_3 |          0  (omitted)
+int_test_per_case_4 |          0  (omitted)
+      int_ful_vac_4 |          0  (omitted)
+          int_CFR_4 |          0  (omitted)
+          int_ICU_4 |          0  (omitted)
+       int_unempl_4 |          0  (omitted)
+          int_CCI_4 |          0  (omitted)
+     int_gov_resp_4 |          0  (omitted)
+int_test_per_case_5 |          0  (omitted)
+      int_ful_vac_5 |   .0065159   .0031654     2.06   0.053     -.000087    .0131188
+          int_CFR_2 |   .0292162   .0141421     2.07   0.052    -.0002837    .0587161
+          int_ICU_2 |          0  (omitted)
+       int_unempl_2 |          0  (omitted)
+          int_CCI_2 |          0  (omitted)
+     int_gov_resp_2 |          0  (omitted)
+int_test_per_case_3 |          0  (omitted)
+      int_ful_vac_3 |          0  (omitted)
+          int_CFR_3 |  -.1170419   .0403913    -2.90   0.009    -.2012967    -.032787
+          int_ICU_3 |          0  (omitted)
+       int_unempl_3 |          0  (omitted)
+          int_CCI_3 |          0  (omitted)
+     int_gov_resp_3 |          0  (omitted)
+int_test_per_case_4 |          0  (omitted)
+      int_ful_vac_4 |          0  (omitted)
+          int_CFR_4 |          0  (omitted)
+          int_ICU_4 |          0  (omitted)
+       int_unempl_4 |          0  (omitted)
+          int_CCI_4 |          0  (omitted)
+     int_gov_resp_4 |          0  (omitted)
+int_test_per_case_5 |          0  (omitted)
+      int_ful_vac_5 |          0  (omitted)
+          int_CFR_5 |          0  (omitted)
+          int_ICU_2 |          0  (omitted)
+       int_unempl_2 |          0  (omitted)
+          int_CCI_2 |          0  (omitted)
+     int_gov_resp_2 |          0  (omitted)
+int_test_per_case_3 |          0  (omitted)
+      int_ful_vac_3 |          0  (omitted)
+          int_CFR_3 |          0  (omitted)
+          int_ICU_3 |          0  (omitted)
+       int_unempl_3 |          0  (omitted)
+          int_CCI_3 |          0  (omitted)
+     int_gov_resp_3 |          0  (omitted)
+int_test_per_case_4 |          0  (omitted)
+      int_ful_vac_4 |          0  (omitted)
+          int_CFR_4 |          0  (omitted)
+          int_ICU_4 |          0  (omitted)
+       int_unempl_4 |          0  (omitted)
+          int_CCI_4 |          0  (omitted)
+     int_gov_resp_4 |          0  (omitted)
+int_test_per_case_5 |          0  (omitted)
+      int_ful_vac_5 |          0  (omitted)
+          int_CFR_5 |          0  (omitted)
+          int_ICU_5 |   .0030918   .0052725     0.59   0.564    -.0079065    .0140902
+       int_unempl_2 |          0  (omitted)
+          int_CCI_2 |          0  (omitted)
+     int_gov_resp_2 |          0  (omitted)
+int_test_per_case_3 |          0  (omitted)
+      int_ful_vac_3 |          0  (omitted)
+          int_CFR_3 |          0  (omitted)
+          int_ICU_3 |          0  (omitted)
+       int_unempl_3 |          0  (omitted)
+          int_CCI_3 |          0  (omitted)
+     int_gov_resp_3 |          0  (omitted)
+int_test_per_case_4 |          0  (omitted)
+      int_ful_vac_4 |          0  (omitted)
+          int_CFR_4 |          0  (omitted)
+          int_ICU_4 |          0  (omitted)
+       int_unempl_4 |          0  (omitted)
+          int_CCI_4 |          0  (omitted)
+     int_gov_resp_4 |          0  (omitted)
+int_test_per_case_5 |          0  (omitted)
+      int_ful_vac_5 |          0  (omitted)
+          int_CFR_5 |          0  (omitted)
+          int_ICU_5 |          0  (omitted)
+       int_unempl_5 |          0  (omitted)
+          int_CCI_2 |          0  (omitted)
+     int_gov_resp_2 |          0  (omitted)
+int_test_per_case_3 |          0  (omitted)
+      int_ful_vac_3 |          0  (omitted)
+          int_CFR_3 |          0  (omitted)
+          int_ICU_3 |          0  (omitted)
+       int_unempl_3 |          0  (omitted)
+          int_CCI_3 |          0  (omitted)
+     int_gov_resp_3 |          0  (omitted)
+int_test_per_case_4 |          0  (omitted)
+      int_ful_vac_4 |          0  (omitted)
+          int_CFR_4 |          0  (omitted)
+          int_ICU_4 |          0  (omitted)
+       int_unempl_4 |          0  (omitted)
+          int_CCI_4 |          0  (omitted)
+     int_gov_resp_4 |          0  (omitted)
+int_test_per_case_5 |          0  (omitted)
+      int_ful_vac_5 |          0  (omitted)
+          int_CFR_5 |          0  (omitted)
+          int_ICU_5 |          0  (omitted)
+       int_unempl_5 |          0  (omitted)
+          int_CCI_5 |   -.063333   .0272455    -2.32   0.031    -.1201661      -.0065
+     int_gov_resp_2 |  -.0003011   .0037721    -0.08   0.937    -.0081695    .0075673
+int_test_per_case_3 |          0  (omitted)
+      int_ful_vac_3 |          0  (omitted)
+          int_CFR_3 |          0  (omitted)
+          int_ICU_3 |          0  (omitted)
+       int_unempl_3 |    .106408   .0591756     1.80   0.087    -.0170301    .2298461
+          int_CCI_3 |          0  (omitted)
+     int_gov_resp_3 |  -.0076138   .0041576    -1.83   0.082    -.0162864    .0010589
+int_test_per_case_4 |          0  (omitted)
+      int_ful_vac_4 |          0  (omitted)
+          int_CFR_4 |   -.142245   .0330775    -4.30   0.000    -.2112434   -.0732466
+          int_ICU_4 |          0  (omitted)
+       int_unempl_4 |   .1487003   .0804332     1.85   0.079    -.0190804     .316481
+          int_CCI_4 |          0  (omitted)
+     int_gov_resp_4 |          0  (omitted)
+int_test_per_case_5 |          0  (omitted)
+      int_ful_vac_5 |          0  (omitted)
+          int_CFR_5 |   .0111165   .1051164     0.11   0.917    -.2081525    .2303856
+          int_ICU_5 |          0  (omitted)
+       int_unempl_5 |   -.003532   .0834887    -0.04   0.967    -.1776864    .1706223
+          int_CCI_5 |          0  (omitted)
+     int_gov_resp_5 |   .0012336   .0050322     0.25   0.809    -.0092633    .0117305
+              _cons |  -4.324207   .8099702    -5.34   0.000    -6.013775   -2.634639
+-------------------------------------------------------------------------------------
+
+. 
+end of do-file
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. reg HS country_dummy2-country_dummy5 c.test_per_case c.ful_vac c.CFR c.ICU c.unempl c.CCI c.gov_resp 
+> int_test_per_case_2-int_test_per_case_5 int_ful_vac_2-int_ful_vac_5 int_CFR_2-int_CFR_5 int_ICU_2-int
+> _ICU_5 int_unempl_2-int_unempl_5 int_CCI_2-int_CCI_5 int_gov_resp_2-int_gov_resp_5, robust
+note: int_CFR_2 omitted because of collinearity.
+note: int_unempl_2 omitted because of collinearity.
+note: int_gov_resp_2 omitted because of collinearity.
+note: int_CFR_3 omitted because of collinearity.
+note: int_ICU_3 omitted because of collinearity.
+note: int_unempl_3 omitted because of collinearity.
+note: int_gov_resp_3 omitted because of collinearity.
+note: int_CFR_4 omitted because of collinearity.
+note: int_unempl_4 omitted because of collinearity.
+note: int_ful_vac_2 omitted because of collinearity.
+note: int_CFR_2 omitted because of collinearity.
+note: int_ICU_2 omitted because of collinearity.
+note: int_CCI_2 omitted because of collinearity.
+note: int_gov_resp_2 omitted because of collinearity.
+note: int_test_per_case_3 omitted because of collinearity.
+note: int_ful_vac_3 omitted because of collinearity.
+note: int_CFR_3 omitted because of collinearity.
+note: int_unempl_3 omitted because of collinearity.
+note: int_CCI_3 omitted because of collinearity.
+note: int_gov_resp_3 omitted because of collinearity.
+note: int_test_per_case_4 omitted because of collinearity.
+note: int_ful_vac_4 omitted because of collinearity.
+note: int_CFR_4 omitted because of collinearity.
+note: int_ICU_4 omitted because of collinearity.
+note: int_unempl_4 omitted because of collinearity.
+note: int_CCI_4 omitted because of collinearity.
+note: int_gov_resp_4 omitted because of collinearity.
+note: int_test_per_case_5 omitted because of collinearity.
+note: int_ICU_2 omitted because of collinearity.
+note: int_unempl_2 omitted because of collinearity.
+note: int_CCI_2 omitted because of collinearity.
+note: int_gov_resp_2 omitted because of collinearity.
+note: int_test_per_case_3 omitted because of collinearity.
+note: int_ful_vac_3 omitted because of collinearity.
+note: int_ICU_3 omitted because of collinearity.
+note: int_unempl_3 omitted because of collinearity.
+note: int_CCI_3 omitted because of collinearity.
+note: int_gov_resp_3 omitted because of collinearity.
+note: int_test_per_case_4 omitted because of collinearity.
+note: int_ful_vac_4 omitted because of collinearity.
+note: int_CFR_4 omitted because of collinearity.
+note: int_ICU_4 omitted because of collinearity.
+note: int_unempl_4 omitted because of collinearity.
+note: int_CCI_4 omitted because of collinearity.
+note: int_gov_resp_4 omitted because of collinearity.
+note: int_test_per_case_5 omitted because of collinearity.
+note: int_ful_vac_5 omitted because of collinearity.
+note: int_CFR_5 omitted because of collinearity.
+note: int_ICU_2 omitted because of collinearity.
+note: int_unempl_2 omitted because of collinearity.
+note: int_CCI_2 omitted because of collinearity.
+note: int_gov_resp_2 omitted because of collinearity.
+note: int_test_per_case_3 omitted because of collinearity.
+note: int_ful_vac_3 omitted because of collinearity.
+note: int_CFR_3 omitted because of collinearity.
+note: int_ICU_3 omitted because of collinearity.
+note: int_unempl_3 omitted because of collinearity.
+note: int_CCI_3 omitted because of collinearity.
+note: int_gov_resp_3 omitted because of collinearity.
+note: int_test_per_case_4 omitted because of collinearity.
+note: int_ful_vac_4 omitted because of collinearity.
+note: int_CFR_4 omitted because of collinearity.
+note: int_ICU_4 omitted because of collinearity.
+note: int_unempl_4 omitted because of collinearity.
+note: int_CCI_4 omitted because of collinearity.
+note: int_gov_resp_4 omitted because of collinearity.
+note: int_test_per_case_5 omitted because of collinearity.
+note: int_ful_vac_5 omitted because of collinearity.
+note: int_CFR_5 omitted because of collinearity.
+note: int_unempl_2 omitted because of collinearity.
+note: int_CCI_2 omitted because of collinearity.
+note: int_gov_resp_2 omitted because of collinearity.
+note: int_test_per_case_3 omitted because of collinearity.
+note: int_ful_vac_3 omitted because of collinearity.
+note: int_CFR_3 omitted because of collinearity.
+note: int_ICU_3 omitted because of collinearity.
+note: int_unempl_3 omitted because of collinearity.
+note: int_CCI_3 omitted because of collinearity.
+note: int_gov_resp_3 omitted because of collinearity.
+note: int_test_per_case_4 omitted because of collinearity.
+note: int_ful_vac_4 omitted because of collinearity.
+note: int_CFR_4 omitted because of collinearity.
+note: int_ICU_4 omitted because of collinearity.
+note: int_unempl_4 omitted because of collinearity.
+note: int_CCI_4 omitted because of collinearity.
+note: int_gov_resp_4 omitted because of collinearity.
+note: int_test_per_case_5 omitted because of collinearity.
+note: int_ful_vac_5 omitted because of collinearity.
+note: int_CFR_5 omitted because of collinearity.
+note: int_ICU_5 omitted because of collinearity.
+note: int_unempl_5 omitted because of collinearity.
+note: int_CCI_2 omitted because of collinearity.
+note: int_gov_resp_2 omitted because of collinearity.
+note: int_test_per_case_3 omitted because of collinearity.
+note: int_ful_vac_3 omitted because of collinearity.
+note: int_CFR_3 omitted because of collinearity.
+note: int_ICU_3 omitted because of collinearity.
+note: int_unempl_3 omitted because of collinearity.
+note: int_CCI_3 omitted because of collinearity.
+note: int_gov_resp_3 omitted because of collinearity.
+note: int_test_per_case_4 omitted because of collinearity.
+note: int_ful_vac_4 omitted because of collinearity.
+note: int_CFR_4 omitted because of collinearity.
+note: int_ICU_4 omitted because of collinearity.
+note: int_unempl_4 omitted because of collinearity.
+note: int_CCI_4 omitted because of collinearity.
+note: int_gov_resp_4 omitted because of collinearity.
+note: int_test_per_case_5 omitted because of collinearity.
+note: int_ful_vac_5 omitted because of collinearity.
+note: int_CFR_5 omitted because of collinearity.
+note: int_ICU_5 omitted because of collinearity.
+note: int_unempl_5 omitted because of collinearity.
+note: int_test_per_case_3 omitted because of collinearity.
+note: int_ful_vac_3 omitted because of collinearity.
+note: int_CFR_3 omitted because of collinearity.
+note: int_ICU_3 omitted because of collinearity.
+note: int_CCI_3 omitted because of collinearity.
+note: int_test_per_case_4 omitted because of collinearity.
+note: int_ful_vac_4 omitted because of collinearity.
+note: int_ICU_4 omitted because of collinearity.
+note: int_CCI_4 omitted because of collinearity.
+note: int_gov_resp_4 omitted because of collinearity.
+note: int_test_per_case_5 omitted because of collinearity.
+note: int_ful_vac_5 omitted because of collinearity.
+note: int_ICU_5 omitted because of collinearity.
+note: int_CCI_5 omitted because of collinearity.
+
+Linear regression                               Number of obs     =         60
+                                                F(39, 20)         =     209.93
+                                                Prob > F          =     0.0000
+                                                R-squared         =     0.9360
+                                                Root MSE          =     .05361
+
+-------------------------------------------------------------------------------------
+                    |               Robust
+                 HS | Coefficient  std. err.      t    P>|t|     [95% conf. interval]
+--------------------+----------------------------------------------------------------
+     country_dummy2 |   4.253866   .8767084     4.85   0.000     2.425084    6.082648
+     country_dummy3 |   3.209552    1.26232     2.54   0.019     .5763981    5.842706
+     country_dummy4 |   4.833198    1.05578     4.58   0.000     2.630878    7.035517
+     country_dummy5 |   4.118005   1.645485     2.50   0.021     .6855841    7.550427
+      test_per_case |  -.0010188   .0003125    -3.26   0.004    -.0016708   -.0003668
+            ful_vac |   .0009961    .000704     1.41   0.172    -.0004725    .0024647
+                CFR |  -.0035446   .0055182    -0.64   0.528    -.0150554    .0079662
+                ICU |  -.0023664   .0014039    -1.69   0.107    -.0052949    .0005621
+             unempl |    .252987   .0172613    14.66   0.000     .2169805    .2889935
+                CCI |   .0329789   .0096921     3.40   0.003     .0127614    .0531964
+           gov_resp |  -.0023067   .0036749    -0.63   0.537    -.0099725     .005359
+int_test_per_case_2 |   .0003486   .0003276     1.06   0.300    -.0003348    .0010321
+      int_ful_vac_2 |   .0004866   .0007672     0.63   0.533    -.0011137    .0020868
+          int_CFR_2 |          0  (omitted)
+          int_ICU_2 |  -.0029354   .0014806    -1.98   0.061    -.0060239    .0001531
+       int_unempl_2 |          0  (omitted)
+          int_CCI_2 |  -.0419549   .0105971    -3.96   0.001      -.06406   -.0198498
+     int_gov_resp_2 |          0  (omitted)
+int_test_per_case_3 |    .000489   .0004693     1.04   0.310    -.0004899    .0014679
+      int_ful_vac_3 |  -.0045624   .0010922    -4.18   0.000    -.0068407    -.002284
+          int_CFR_3 |          0  (omitted)
+          int_ICU_3 |          0  (omitted)
+       int_unempl_3 |          0  (omitted)
+          int_CCI_3 |  -.0213654   .0147387    -1.45   0.163    -.0521098     .009379
+     int_gov_resp_3 |          0  (omitted)
+int_test_per_case_4 |    .000145   .0004194     0.35   0.733    -.0007299    .0010198
+      int_ful_vac_4 |  -.0018386   .0011123    -1.65   0.114    -.0041589    .0004817
+          int_CFR_4 |          0  (omitted)
+          int_ICU_4 |   .0035954   .0016203     2.22   0.038     .0002155    .0069753
+       int_unempl_4 |          0  (omitted)
+          int_CCI_4 |  -.0428371   .0132104    -3.24   0.004    -.0703934   -.0152808
+     int_gov_resp_4 |   .0012994   .0038812     0.33   0.741    -.0067966    .0093953
+int_test_per_case_5 |     -.0027   .0021881    -1.23   0.232    -.0072644    .0018643
+      int_ful_vac_2 |          0  (omitted)
+          int_CFR_2 |          0  (omitted)
+          int_ICU_2 |          0  (omitted)
+       int_unempl_2 |  -.0440328   .0239503    -1.84   0.081    -.0939922    .0059267
+          int_CCI_2 |          0  (omitted)
+     int_gov_resp_2 |          0  (omitted)
+int_test_per_case_3 |          0  (omitted)
+      int_ful_vac_3 |          0  (omitted)
+          int_CFR_3 |          0  (omitted)
+          int_ICU_3 |  -.0004666   .0028155    -0.17   0.870    -.0063397    .0054065
+       int_unempl_3 |          0  (omitted)
+          int_CCI_3 |          0  (omitted)
+     int_gov_resp_3 |          0  (omitted)
+int_test_per_case_4 |          0  (omitted)
+      int_ful_vac_4 |          0  (omitted)
+          int_CFR_4 |          0  (omitted)
+          int_ICU_4 |          0  (omitted)
+       int_unempl_4 |          0  (omitted)
+          int_CCI_4 |          0  (omitted)
+     int_gov_resp_4 |          0  (omitted)
+int_test_per_case_5 |          0  (omitted)
+      int_ful_vac_5 |   .0065159   .0031654     2.06   0.053     -.000087    .0131188
+          int_CFR_2 |   .0292162   .0141421     2.07   0.052    -.0002837    .0587161
+          int_ICU_2 |          0  (omitted)
+       int_unempl_2 |          0  (omitted)
+          int_CCI_2 |          0  (omitted)
+     int_gov_resp_2 |          0  (omitted)
+int_test_per_case_3 |          0  (omitted)
+      int_ful_vac_3 |          0  (omitted)
+          int_CFR_3 |  -.1170419   .0403913    -2.90   0.009    -.2012967    -.032787
+          int_ICU_3 |          0  (omitted)
+       int_unempl_3 |          0  (omitted)
+          int_CCI_3 |          0  (omitted)
+     int_gov_resp_3 |          0  (omitted)
+int_test_per_case_4 |          0  (omitted)
+      int_ful_vac_4 |          0  (omitted)
+          int_CFR_4 |          0  (omitted)
+          int_ICU_4 |          0  (omitted)
+       int_unempl_4 |          0  (omitted)
+          int_CCI_4 |          0  (omitted)
+     int_gov_resp_4 |          0  (omitted)
+int_test_per_case_5 |          0  (omitted)
+      int_ful_vac_5 |          0  (omitted)
+          int_CFR_5 |          0  (omitted)
+          int_ICU_2 |          0  (omitted)
+       int_unempl_2 |          0  (omitted)
+          int_CCI_2 |          0  (omitted)
+     int_gov_resp_2 |          0  (omitted)
+int_test_per_case_3 |          0  (omitted)
+      int_ful_vac_3 |          0  (omitted)
+          int_CFR_3 |          0  (omitted)
+          int_ICU_3 |          0  (omitted)
+       int_unempl_3 |          0  (omitted)
+          int_CCI_3 |          0  (omitted)
+     int_gov_resp_3 |          0  (omitted)
+int_test_per_case_4 |          0  (omitted)
+      int_ful_vac_4 |          0  (omitted)
+          int_CFR_4 |          0  (omitted)
+          int_ICU_4 |          0  (omitted)
+       int_unempl_4 |          0  (omitted)
+          int_CCI_4 |          0  (omitted)
+     int_gov_resp_4 |          0  (omitted)
+int_test_per_case_5 |          0  (omitted)
+      int_ful_vac_5 |          0  (omitted)
+          int_CFR_5 |          0  (omitted)
+          int_ICU_5 |   .0030918   .0052725     0.59   0.564    -.0079065    .0140902
+       int_unempl_2 |          0  (omitted)
+          int_CCI_2 |          0  (omitted)
+     int_gov_resp_2 |          0  (omitted)
+int_test_per_case_3 |          0  (omitted)
+      int_ful_vac_3 |          0  (omitted)
+          int_CFR_3 |          0  (omitted)
+          int_ICU_3 |          0  (omitted)
+       int_unempl_3 |          0  (omitted)
+          int_CCI_3 |          0  (omitted)
+     int_gov_resp_3 |          0  (omitted)
+int_test_per_case_4 |          0  (omitted)
+      int_ful_vac_4 |          0  (omitted)
+          int_CFR_4 |          0  (omitted)
+          int_ICU_4 |          0  (omitted)
+       int_unempl_4 |          0  (omitted)
+          int_CCI_4 |          0  (omitted)
+     int_gov_resp_4 |          0  (omitted)
+int_test_per_case_5 |          0  (omitted)
+      int_ful_vac_5 |          0  (omitted)
+          int_CFR_5 |          0  (omitted)
+          int_ICU_5 |          0  (omitted)
+       int_unempl_5 |          0  (omitted)
+          int_CCI_2 |          0  (omitted)
+     int_gov_resp_2 |          0  (omitted)
+int_test_per_case_3 |          0  (omitted)
+      int_ful_vac_3 |          0  (omitted)
+          int_CFR_3 |          0  (omitted)
+          int_ICU_3 |          0  (omitted)
+       int_unempl_3 |          0  (omitted)
+          int_CCI_3 |          0  (omitted)
+     int_gov_resp_3 |          0  (omitted)
+int_test_per_case_4 |          0  (omitted)
+      int_ful_vac_4 |          0  (omitted)
+          int_CFR_4 |          0  (omitted)
+          int_ICU_4 |          0  (omitted)
+       int_unempl_4 |          0  (omitted)
+          int_CCI_4 |          0  (omitted)
+     int_gov_resp_4 |          0  (omitted)
+int_test_per_case_5 |          0  (omitted)
+      int_ful_vac_5 |          0  (omitted)
+          int_CFR_5 |          0  (omitted)
+          int_ICU_5 |          0  (omitted)
+       int_unempl_5 |          0  (omitted)
+          int_CCI_5 |   -.063333   .0272455    -2.32   0.031    -.1201661      -.0065
+     int_gov_resp_2 |  -.0003011   .0037721    -0.08   0.937    -.0081695    .0075673
+int_test_per_case_3 |          0  (omitted)
+      int_ful_vac_3 |          0  (omitted)
+          int_CFR_3 |          0  (omitted)
+          int_ICU_3 |          0  (omitted)
+       int_unempl_3 |    .106408   .0591756     1.80   0.087    -.0170301    .2298461
+          int_CCI_3 |          0  (omitted)
+     int_gov_resp_3 |  -.0076138   .0041576    -1.83   0.082    -.0162864    .0010589
+int_test_per_case_4 |          0  (omitted)
+      int_ful_vac_4 |          0  (omitted)
+          int_CFR_4 |   -.142245   .0330775    -4.30   0.000    -.2112434   -.0732466
+          int_ICU_4 |          0  (omitted)
+       int_unempl_4 |   .1487003   .0804332     1.85   0.079    -.0190804     .316481
+          int_CCI_4 |          0  (omitted)
+     int_gov_resp_4 |          0  (omitted)
+int_test_per_case_5 |          0  (omitted)
+      int_ful_vac_5 |          0  (omitted)
+          int_CFR_5 |   .0111165   .1051164     0.11   0.917    -.2081525    .2303856
+          int_ICU_5 |          0  (omitted)
+       int_unempl_5 |   -.003532   .0834887    -0.04   0.967    -.1776864    .1706223
+          int_CCI_5 |          0  (omitted)
+     int_gov_resp_5 |   .0012336   .0050322     0.25   0.809    -.0092633    .0117305
+              _cons |  -4.324207   .8099702    -5.34   0.000    -6.013775   -2.634639
+-------------------------------------------------------------------------------------
+
+. 
+end of do-file
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. predict yhat
+(option xb assumed; fitted values)
+
+. 
+end of do-file
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. predict residual, residuals
+
+. 
+end of do-file
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. pnorm residual
+
+. 
+end of do-file
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. graph export "/Users/Ferniz/Documents/LSE /HP434/dum_pnorm.pdf", replace
+file /Users/Ferniz/Documents/LSE /HP434/dum_pnorm.pdf saved as PDF format
+
+. 
+end of do-file
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. qnorm residual
+
+. graph export "/Users/Ferniz/Documents/LSE /HP434/dum_qnorm.pdf", replace
+file /Users/Ferniz/Documents/LSE /HP434/dum_qnorm.pdf saved as PDF format
+
+. 
+end of do-file
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. twoway (scatter residual yhat, mcolor(blue) msize(small)) (function y=0, range(yhat) lcolor(black) lp
+> attern(solid) lwidth(thin)) (lfit residual yhat, lcolor(red) lpattern(dash) lwidth(medium)), title("R
+> esidual vs Fitted Plot") xtitle("Fitted Values") ytitle("Residuals") legend(order(1 "Residuals" 2 "Ze
+> ro Line" 3 "Fitted Line"))
+
+. 
+end of do-file
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. graph export "/Users/Ferniz/Documents/LSE /HP434/dum_twoway.pdf", replace          
+file /Users/Ferniz/Documents/LSE /HP434/dum_twoway.pdf saved as PDF format
+
+. 
+end of do-file
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. estat hettest
+hettest not appropriate after estimation using robust or clustered VCE
+r(498);
+
+end of do-file
+
+r(498);
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. xttest3
+last estimates not found
+r(301);
+
+end of do-file
+
+r(301);
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. reg HS country_dummy2-country_dummy5 c.test_per_case c.ful_vac c.CFR c.ICU c.unempl c.CCI c.gov_resp 
+> int_test_per_case_2-int_test_per_case_5 int_ful_vac_2-int_ful_vac_5 int_CFR_2-int_CFR_5 int_ICU_2-int
+> _ICU_5 int_unempl_2-int_unempl_5 int_CCI_2-int_CCI_5 int_gov_resp_2-int_gov_resp_5, robust
+note: int_CFR_2 omitted because of collinearity.
+note: int_unempl_2 omitted because of collinearity.
+note: int_gov_resp_2 omitted because of collinearity.
+note: int_CFR_3 omitted because of collinearity.
+note: int_ICU_3 omitted because of collinearity.
+note: int_unempl_3 omitted because of collinearity.
+note: int_gov_resp_3 omitted because of collinearity.
+note: int_CFR_4 omitted because of collinearity.
+note: int_unempl_4 omitted because of collinearity.
+note: int_ful_vac_2 omitted because of collinearity.
+note: int_CFR_2 omitted because of collinearity.
+note: int_ICU_2 omitted because of collinearity.
+note: int_CCI_2 omitted because of collinearity.
+note: int_gov_resp_2 omitted because of collinearity.
+note: int_test_per_case_3 omitted because of collinearity.
+note: int_ful_vac_3 omitted because of collinearity.
+note: int_CFR_3 omitted because of collinearity.
+note: int_unempl_3 omitted because of collinearity.
+note: int_CCI_3 omitted because of collinearity.
+note: int_gov_resp_3 omitted because of collinearity.
+note: int_test_per_case_4 omitted because of collinearity.
+note: int_ful_vac_4 omitted because of collinearity.
+note: int_CFR_4 omitted because of collinearity.
+note: int_ICU_4 omitted because of collinearity.
+note: int_unempl_4 omitted because of collinearity.
+note: int_CCI_4 omitted because of collinearity.
+note: int_gov_resp_4 omitted because of collinearity.
+note: int_test_per_case_5 omitted because of collinearity.
+note: int_ICU_2 omitted because of collinearity.
+note: int_unempl_2 omitted because of collinearity.
+note: int_CCI_2 omitted because of collinearity.
+note: int_gov_resp_2 omitted because of collinearity.
+note: int_test_per_case_3 omitted because of collinearity.
+note: int_ful_vac_3 omitted because of collinearity.
+note: int_ICU_3 omitted because of collinearity.
+note: int_unempl_3 omitted because of collinearity.
+note: int_CCI_3 omitted because of collinearity.
+note: int_gov_resp_3 omitted because of collinearity.
+note: int_test_per_case_4 omitted because of collinearity.
+note: int_ful_vac_4 omitted because of collinearity.
+note: int_CFR_4 omitted because of collinearity.
+note: int_ICU_4 omitted because of collinearity.
+note: int_unempl_4 omitted because of collinearity.
+note: int_CCI_4 omitted because of collinearity.
+note: int_gov_resp_4 omitted because of collinearity.
+note: int_test_per_case_5 omitted because of collinearity.
+note: int_ful_vac_5 omitted because of collinearity.
+note: int_CFR_5 omitted because of collinearity.
+note: int_ICU_2 omitted because of collinearity.
+note: int_unempl_2 omitted because of collinearity.
+note: int_CCI_2 omitted because of collinearity.
+note: int_gov_resp_2 omitted because of collinearity.
+note: int_test_per_case_3 omitted because of collinearity.
+note: int_ful_vac_3 omitted because of collinearity.
+note: int_CFR_3 omitted because of collinearity.
+note: int_ICU_3 omitted because of collinearity.
+note: int_unempl_3 omitted because of collinearity.
+note: int_CCI_3 omitted because of collinearity.
+note: int_gov_resp_3 omitted because of collinearity.
+note: int_test_per_case_4 omitted because of collinearity.
+note: int_ful_vac_4 omitted because of collinearity.
+note: int_CFR_4 omitted because of collinearity.
+note: int_ICU_4 omitted because of collinearity.
+note: int_unempl_4 omitted because of collinearity.
+note: int_CCI_4 omitted because of collinearity.
+note: int_gov_resp_4 omitted because of collinearity.
+note: int_test_per_case_5 omitted because of collinearity.
+note: int_ful_vac_5 omitted because of collinearity.
+note: int_CFR_5 omitted because of collinearity.
+note: int_unempl_2 omitted because of collinearity.
+note: int_CCI_2 omitted because of collinearity.
+note: int_gov_resp_2 omitted because of collinearity.
+note: int_test_per_case_3 omitted because of collinearity.
+note: int_ful_vac_3 omitted because of collinearity.
+note: int_CFR_3 omitted because of collinearity.
+note: int_ICU_3 omitted because of collinearity.
+note: int_unempl_3 omitted because of collinearity.
+note: int_CCI_3 omitted because of collinearity.
+note: int_gov_resp_3 omitted because of collinearity.
+note: int_test_per_case_4 omitted because of collinearity.
+note: int_ful_vac_4 omitted because of collinearity.
+note: int_CFR_4 omitted because of collinearity.
+note: int_ICU_4 omitted because of collinearity.
+note: int_unempl_4 omitted because of collinearity.
+note: int_CCI_4 omitted because of collinearity.
+note: int_gov_resp_4 omitted because of collinearity.
+note: int_test_per_case_5 omitted because of collinearity.
+note: int_ful_vac_5 omitted because of collinearity.
+note: int_CFR_5 omitted because of collinearity.
+note: int_ICU_5 omitted because of collinearity.
+note: int_unempl_5 omitted because of collinearity.
+note: int_CCI_2 omitted because of collinearity.
+note: int_gov_resp_2 omitted because of collinearity.
+note: int_test_per_case_3 omitted because of collinearity.
+note: int_ful_vac_3 omitted because of collinearity.
+note: int_CFR_3 omitted because of collinearity.
+note: int_ICU_3 omitted because of collinearity.
+note: int_unempl_3 omitted because of collinearity.
+note: int_CCI_3 omitted because of collinearity.
+note: int_gov_resp_3 omitted because of collinearity.
+note: int_test_per_case_4 omitted because of collinearity.
+note: int_ful_vac_4 omitted because of collinearity.
+note: int_CFR_4 omitted because of collinearity.
+note: int_ICU_4 omitted because of collinearity.
+note: int_unempl_4 omitted because of collinearity.
+note: int_CCI_4 omitted because of collinearity.
+note: int_gov_resp_4 omitted because of collinearity.
+note: int_test_per_case_5 omitted because of collinearity.
+note: int_ful_vac_5 omitted because of collinearity.
+note: int_CFR_5 omitted because of collinearity.
+note: int_ICU_5 omitted because of collinearity.
+note: int_unempl_5 omitted because of collinearity.
+note: int_test_per_case_3 omitted because of collinearity.
+note: int_ful_vac_3 omitted because of collinearity.
+note: int_CFR_3 omitted because of collinearity.
+note: int_ICU_3 omitted because of collinearity.
+note: int_CCI_3 omitted because of collinearity.
+note: int_test_per_case_4 omitted because of collinearity.
+note: int_ful_vac_4 omitted because of collinearity.
+note: int_ICU_4 omitted because of collinearity.
+note: int_CCI_4 omitted because of collinearity.
+note: int_gov_resp_4 omitted because of collinearity.
+note: int_test_per_case_5 omitted because of collinearity.
+note: int_ful_vac_5 omitted because of collinearity.
+note: int_ICU_5 omitted because of collinearity.
+note: int_CCI_5 omitted because of collinearity.
+
+Linear regression                               Number of obs     =         60
+                                                F(39, 20)         =     209.93
+                                                Prob > F          =     0.0000
+                                                R-squared         =     0.9360
+                                                Root MSE          =     .05361
+
+-------------------------------------------------------------------------------------
+                    |               Robust
+                 HS | Coefficient  std. err.      t    P>|t|     [95% conf. interval]
+--------------------+----------------------------------------------------------------
+     country_dummy2 |   4.253866   .8767084     4.85   0.000     2.425084    6.082648
+     country_dummy3 |   3.209552    1.26232     2.54   0.019     .5763981    5.842706
+     country_dummy4 |   4.833198    1.05578     4.58   0.000     2.630878    7.035517
+     country_dummy5 |   4.118005   1.645485     2.50   0.021     .6855841    7.550427
+      test_per_case |  -.0010188   .0003125    -3.26   0.004    -.0016708   -.0003668
+            ful_vac |   .0009961    .000704     1.41   0.172    -.0004725    .0024647
+                CFR |  -.0035446   .0055182    -0.64   0.528    -.0150554    .0079662
+                ICU |  -.0023664   .0014039    -1.69   0.107    -.0052949    .0005621
+             unempl |    .252987   .0172613    14.66   0.000     .2169805    .2889935
+                CCI |   .0329789   .0096921     3.40   0.003     .0127614    .0531964
+           gov_resp |  -.0023067   .0036749    -0.63   0.537    -.0099725     .005359
+int_test_per_case_2 |   .0003486   .0003276     1.06   0.300    -.0003348    .0010321
+      int_ful_vac_2 |   .0004866   .0007672     0.63   0.533    -.0011137    .0020868
+          int_CFR_2 |          0  (omitted)
+          int_ICU_2 |  -.0029354   .0014806    -1.98   0.061    -.0060239    .0001531
+       int_unempl_2 |          0  (omitted)
+          int_CCI_2 |  -.0419549   .0105971    -3.96   0.001      -.06406   -.0198498
+     int_gov_resp_2 |          0  (omitted)
+int_test_per_case_3 |    .000489   .0004693     1.04   0.310    -.0004899    .0014679
+      int_ful_vac_3 |  -.0045624   .0010922    -4.18   0.000    -.0068407    -.002284
+          int_CFR_3 |          0  (omitted)
+          int_ICU_3 |          0  (omitted)
+       int_unempl_3 |          0  (omitted)
+          int_CCI_3 |  -.0213654   .0147387    -1.45   0.163    -.0521098     .009379
+     int_gov_resp_3 |          0  (omitted)
+int_test_per_case_4 |    .000145   .0004194     0.35   0.733    -.0007299    .0010198
+      int_ful_vac_4 |  -.0018386   .0011123    -1.65   0.114    -.0041589    .0004817
+          int_CFR_4 |          0  (omitted)
+          int_ICU_4 |   .0035954   .0016203     2.22   0.038     .0002155    .0069753
+       int_unempl_4 |          0  (omitted)
+          int_CCI_4 |  -.0428371   .0132104    -3.24   0.004    -.0703934   -.0152808
+     int_gov_resp_4 |   .0012994   .0038812     0.33   0.741    -.0067966    .0093953
+int_test_per_case_5 |     -.0027   .0021881    -1.23   0.232    -.0072644    .0018643
+      int_ful_vac_2 |          0  (omitted)
+          int_CFR_2 |          0  (omitted)
+          int_ICU_2 |          0  (omitted)
+       int_unempl_2 |  -.0440328   .0239503    -1.84   0.081    -.0939922    .0059267
+          int_CCI_2 |          0  (omitted)
+     int_gov_resp_2 |          0  (omitted)
+int_test_per_case_3 |          0  (omitted)
+      int_ful_vac_3 |          0  (omitted)
+          int_CFR_3 |          0  (omitted)
+          int_ICU_3 |  -.0004666   .0028155    -0.17   0.870    -.0063397    .0054065
+       int_unempl_3 |          0  (omitted)
+          int_CCI_3 |          0  (omitted)
+     int_gov_resp_3 |          0  (omitted)
+int_test_per_case_4 |          0  (omitted)
+      int_ful_vac_4 |          0  (omitted)
+          int_CFR_4 |          0  (omitted)
+          int_ICU_4 |          0  (omitted)
+       int_unempl_4 |          0  (omitted)
+          int_CCI_4 |          0  (omitted)
+     int_gov_resp_4 |          0  (omitted)
+int_test_per_case_5 |          0  (omitted)
+      int_ful_vac_5 |   .0065159   .0031654     2.06   0.053     -.000087    .0131188
+          int_CFR_2 |   .0292162   .0141421     2.07   0.052    -.0002837    .0587161
+          int_ICU_2 |          0  (omitted)
+       int_unempl_2 |          0  (omitted)
+          int_CCI_2 |          0  (omitted)
+     int_gov_resp_2 |          0  (omitted)
+int_test_per_case_3 |          0  (omitted)
+      int_ful_vac_3 |          0  (omitted)
+          int_CFR_3 |  -.1170419   .0403913    -2.90   0.009    -.2012967    -.032787
+          int_ICU_3 |          0  (omitted)
+       int_unempl_3 |          0  (omitted)
+          int_CCI_3 |          0  (omitted)
+     int_gov_resp_3 |          0  (omitted)
+int_test_per_case_4 |          0  (omitted)
+      int_ful_vac_4 |          0  (omitted)
+          int_CFR_4 |          0  (omitted)
+          int_ICU_4 |          0  (omitted)
+       int_unempl_4 |          0  (omitted)
+          int_CCI_4 |          0  (omitted)
+     int_gov_resp_4 |          0  (omitted)
+int_test_per_case_5 |          0  (omitted)
+      int_ful_vac_5 |          0  (omitted)
+          int_CFR_5 |          0  (omitted)
+          int_ICU_2 |          0  (omitted)
+       int_unempl_2 |          0  (omitted)
+          int_CCI_2 |          0  (omitted)
+     int_gov_resp_2 |          0  (omitted)
+int_test_per_case_3 |          0  (omitted)
+      int_ful_vac_3 |          0  (omitted)
+          int_CFR_3 |          0  (omitted)
+          int_ICU_3 |          0  (omitted)
+       int_unempl_3 |          0  (omitted)
+          int_CCI_3 |          0  (omitted)
+     int_gov_resp_3 |          0  (omitted)
+int_test_per_case_4 |          0  (omitted)
+      int_ful_vac_4 |          0  (omitted)
+          int_CFR_4 |          0  (omitted)
+          int_ICU_4 |          0  (omitted)
+       int_unempl_4 |          0  (omitted)
+          int_CCI_4 |          0  (omitted)
+     int_gov_resp_4 |          0  (omitted)
+int_test_per_case_5 |          0  (omitted)
+      int_ful_vac_5 |          0  (omitted)
+          int_CFR_5 |          0  (omitted)
+          int_ICU_5 |   .0030918   .0052725     0.59   0.564    -.0079065    .0140902
+       int_unempl_2 |          0  (omitted)
+          int_CCI_2 |          0  (omitted)
+     int_gov_resp_2 |          0  (omitted)
+int_test_per_case_3 |          0  (omitted)
+      int_ful_vac_3 |          0  (omitted)
+          int_CFR_3 |          0  (omitted)
+          int_ICU_3 |          0  (omitted)
+       int_unempl_3 |          0  (omitted)
+          int_CCI_3 |          0  (omitted)
+     int_gov_resp_3 |          0  (omitted)
+int_test_per_case_4 |          0  (omitted)
+      int_ful_vac_4 |          0  (omitted)
+          int_CFR_4 |          0  (omitted)
+          int_ICU_4 |          0  (omitted)
+       int_unempl_4 |          0  (omitted)
+          int_CCI_4 |          0  (omitted)
+     int_gov_resp_4 |          0  (omitted)
+int_test_per_case_5 |          0  (omitted)
+      int_ful_vac_5 |          0  (omitted)
+          int_CFR_5 |          0  (omitted)
+          int_ICU_5 |          0  (omitted)
+       int_unempl_5 |          0  (omitted)
+          int_CCI_2 |          0  (omitted)
+     int_gov_resp_2 |          0  (omitted)
+int_test_per_case_3 |          0  (omitted)
+      int_ful_vac_3 |          0  (omitted)
+          int_CFR_3 |          0  (omitted)
+          int_ICU_3 |          0  (omitted)
+       int_unempl_3 |          0  (omitted)
+          int_CCI_3 |          0  (omitted)
+     int_gov_resp_3 |          0  (omitted)
+int_test_per_case_4 |          0  (omitted)
+      int_ful_vac_4 |          0  (omitted)
+          int_CFR_4 |          0  (omitted)
+          int_ICU_4 |          0  (omitted)
+       int_unempl_4 |          0  (omitted)
+          int_CCI_4 |          0  (omitted)
+     int_gov_resp_4 |          0  (omitted)
+int_test_per_case_5 |          0  (omitted)
+      int_ful_vac_5 |          0  (omitted)
+          int_CFR_5 |          0  (omitted)
+          int_ICU_5 |          0  (omitted)
+       int_unempl_5 |          0  (omitted)
+          int_CCI_5 |   -.063333   .0272455    -2.32   0.031    -.1201661      -.0065
+     int_gov_resp_2 |  -.0003011   .0037721    -0.08   0.937    -.0081695    .0075673
+int_test_per_case_3 |          0  (omitted)
+      int_ful_vac_3 |          0  (omitted)
+          int_CFR_3 |          0  (omitted)
+          int_ICU_3 |          0  (omitted)
+       int_unempl_3 |    .106408   .0591756     1.80   0.087    -.0170301    .2298461
+          int_CCI_3 |          0  (omitted)
+     int_gov_resp_3 |  -.0076138   .0041576    -1.83   0.082    -.0162864    .0010589
+int_test_per_case_4 |          0  (omitted)
+      int_ful_vac_4 |          0  (omitted)
+          int_CFR_4 |   -.142245   .0330775    -4.30   0.000    -.2112434   -.0732466
+          int_ICU_4 |          0  (omitted)
+       int_unempl_4 |   .1487003   .0804332     1.85   0.079    -.0190804     .316481
+          int_CCI_4 |          0  (omitted)
+     int_gov_resp_4 |          0  (omitted)
+int_test_per_case_5 |          0  (omitted)
+      int_ful_vac_5 |          0  (omitted)
+          int_CFR_5 |   .0111165   .1051164     0.11   0.917    -.2081525    .2303856
+          int_ICU_5 |          0  (omitted)
+       int_unempl_5 |   -.003532   .0834887    -0.04   0.967    -.1776864    .1706223
+          int_CCI_5 |          0  (omitted)
+     int_gov_resp_5 |   .0012336   .0050322     0.25   0.809    -.0092633    .0117305
+              _cons |  -4.324207   .8099702    -5.34   0.000    -6.013775   -2.634639
+-------------------------------------------------------------------------------------
+
+. 
+end of do-file
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. xttest3
+last estimates not found
+r(301);
+
+end of do-file
+
+r(301);
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. estat hettest
+hettest not appropriate after estimation using robust or clustered VCE
+r(498);
+
+end of do-file
+
+r(498);
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. vif
+
+    Variable |       VIF       1/VIF  
+-------------+----------------------
+   int_CCI_4 |  24077.84    0.000042
+country_du~4 |  21942.77    0.000046
+   int_CCI_5 |  17960.57    0.000056
+   int_CCI_2 |  17584.22    0.000057
+country_du~5 |  17036.58    0.000059
+country_du~2 |  16494.12    0.000061
+   int_CCI_3 |  14287.67    0.000070
+country_du~3 |  13806.44    0.000072
+      unempl |    194.09    0.005152
+int_gov_re~4 |     75.68    0.013213
+int_gov_re~5 |     74.15    0.013486
+         CCI |     57.23    0.017473
+test_per_c~e |     46.33    0.021582
+    gov_resp |     32.56    0.030714
+int_test_p~2 |     29.54    0.033852
+int_ful_va~5 |     25.50    0.039221
+   int_ICU_5 |     19.76    0.050595
+int_ful_va~4 |     17.64    0.056680
+int_test_p~3 |     16.54    0.060472
+         ICU |     14.08    0.071039
+     ful_vac |     12.73    0.078531
+   int_ICU_4 |     12.40    0.080676
+int_test_p~4 |     11.08    0.090290
+int_ful_va~2 |      9.32    0.107262
+   int_ICU_2 |      8.60    0.116279
+int_ful_va~3 |      6.23    0.160499
+int_test_p~5 |      4.08    0.245009
+         CFR |      2.62    0.382271
+-------------+----------------------
+    Mean VIF |   5137.87
+
+. 
+end of do-file
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. reg HS country_dummy2-country_dummy5 c.test_per_case c.ful_vac c.CFR c.ICU c.unempl c.CCI c.gov_resp 
+> int_test_per_case_2-int_test_per_case_5 int_ful_vac_2-int_ful_vac_5 int_CFR_2-int_CFR_5 int_ICU_2-int
+> _ICU_5 int_unempl_2-int_unempl_5 int_CCI_2-int_CCI_5 int_gov_resp_2-int_gov_resp_5, robust
+note: int_CFR_2 omitted because of collinearity.
+note: int_unempl_2 omitted because of collinearity.
+note: int_gov_resp_2 omitted because of collinearity.
+note: int_CFR_3 omitted because of collinearity.
+note: int_ICU_3 omitted because of collinearity.
+note: int_unempl_3 omitted because of collinearity.
+note: int_gov_resp_3 omitted because of collinearity.
+note: int_CFR_4 omitted because of collinearity.
+note: int_unempl_4 omitted because of collinearity.
+note: int_ful_vac_2 omitted because of collinearity.
+note: int_CFR_2 omitted because of collinearity.
+note: int_ICU_2 omitted because of collinearity.
+note: int_CCI_2 omitted because of collinearity.
+note: int_gov_resp_2 omitted because of collinearity.
+note: int_test_per_case_3 omitted because of collinearity.
+note: int_ful_vac_3 omitted because of collinearity.
+note: int_CFR_3 omitted because of collinearity.
+note: int_unempl_3 omitted because of collinearity.
+note: int_CCI_3 omitted because of collinearity.
+note: int_gov_resp_3 omitted because of collinearity.
+note: int_test_per_case_4 omitted because of collinearity.
+note: int_ful_vac_4 omitted because of collinearity.
+note: int_CFR_4 omitted because of collinearity.
+note: int_ICU_4 omitted because of collinearity.
+note: int_unempl_4 omitted because of collinearity.
+note: int_CCI_4 omitted because of collinearity.
+note: int_gov_resp_4 omitted because of collinearity.
+note: int_test_per_case_5 omitted because of collinearity.
+note: int_ICU_2 omitted because of collinearity.
+note: int_unempl_2 omitted because of collinearity.
+note: int_CCI_2 omitted because of collinearity.
+note: int_gov_resp_2 omitted because of collinearity.
+note: int_test_per_case_3 omitted because of collinearity.
+note: int_ful_vac_3 omitted because of collinearity.
+note: int_ICU_3 omitted because of collinearity.
+note: int_unempl_3 omitted because of collinearity.
+note: int_CCI_3 omitted because of collinearity.
+note: int_gov_resp_3 omitted because of collinearity.
+note: int_test_per_case_4 omitted because of collinearity.
+note: int_ful_vac_4 omitted because of collinearity.
+note: int_CFR_4 omitted because of collinearity.
+note: int_ICU_4 omitted because of collinearity.
+note: int_unempl_4 omitted because of collinearity.
+note: int_CCI_4 omitted because of collinearity.
+note: int_gov_resp_4 omitted because of collinearity.
+note: int_test_per_case_5 omitted because of collinearity.
+note: int_ful_vac_5 omitted because of collinearity.
+note: int_CFR_5 omitted because of collinearity.
+note: int_ICU_2 omitted because of collinearity.
+note: int_unempl_2 omitted because of collinearity.
+note: int_CCI_2 omitted because of collinearity.
+note: int_gov_resp_2 omitted because of collinearity.
+note: int_test_per_case_3 omitted because of collinearity.
+note: int_ful_vac_3 omitted because of collinearity.
+note: int_CFR_3 omitted because of collinearity.
+note: int_ICU_3 omitted because of collinearity.
+note: int_unempl_3 omitted because of collinearity.
+note: int_CCI_3 omitted because of collinearity.
+note: int_gov_resp_3 omitted because of collinearity.
+note: int_test_per_case_4 omitted because of collinearity.
+note: int_ful_vac_4 omitted because of collinearity.
+note: int_CFR_4 omitted because of collinearity.
+note: int_ICU_4 omitted because of collinearity.
+note: int_unempl_4 omitted because of collinearity.
+note: int_CCI_4 omitted because of collinearity.
+note: int_gov_resp_4 omitted because of collinearity.
+note: int_test_per_case_5 omitted because of collinearity.
+note: int_ful_vac_5 omitted because of collinearity.
+note: int_CFR_5 omitted because of collinearity.
+note: int_unempl_2 omitted because of collinearity.
+note: int_CCI_2 omitted because of collinearity.
+note: int_gov_resp_2 omitted because of collinearity.
+note: int_test_per_case_3 omitted because of collinearity.
+note: int_ful_vac_3 omitted because of collinearity.
+note: int_CFR_3 omitted because of collinearity.
+note: int_ICU_3 omitted because of collinearity.
+note: int_unempl_3 omitted because of collinearity.
+note: int_CCI_3 omitted because of collinearity.
+note: int_gov_resp_3 omitted because of collinearity.
+note: int_test_per_case_4 omitted because of collinearity.
+note: int_ful_vac_4 omitted because of collinearity.
+note: int_CFR_4 omitted because of collinearity.
+note: int_ICU_4 omitted because of collinearity.
+note: int_unempl_4 omitted because of collinearity.
+note: int_CCI_4 omitted because of collinearity.
+note: int_gov_resp_4 omitted because of collinearity.
+note: int_test_per_case_5 omitted because of collinearity.
+note: int_ful_vac_5 omitted because of collinearity.
+note: int_CFR_5 omitted because of collinearity.
+note: int_ICU_5 omitted because of collinearity.
+note: int_unempl_5 omitted because of collinearity.
+note: int_CCI_2 omitted because of collinearity.
+note: int_gov_resp_2 omitted because of collinearity.
+note: int_test_per_case_3 omitted because of collinearity.
+note: int_ful_vac_3 omitted because of collinearity.
+note: int_CFR_3 omitted because of collinearity.
+note: int_ICU_3 omitted because of collinearity.
+note: int_unempl_3 omitted because of collinearity.
+note: int_CCI_3 omitted because of collinearity.
+note: int_gov_resp_3 omitted because of collinearity.
+note: int_test_per_case_4 omitted because of collinearity.
+note: int_ful_vac_4 omitted because of collinearity.
+note: int_CFR_4 omitted because of collinearity.
+note: int_ICU_4 omitted because of collinearity.
+note: int_unempl_4 omitted because of collinearity.
+note: int_CCI_4 omitted because of collinearity.
+note: int_gov_resp_4 omitted because of collinearity.
+note: int_test_per_case_5 omitted because of collinearity.
+note: int_ful_vac_5 omitted because of collinearity.
+note: int_CFR_5 omitted because of collinearity.
+note: int_ICU_5 omitted because of collinearity.
+note: int_unempl_5 omitted because of collinearity.
+note: int_test_per_case_3 omitted because of collinearity.
+note: int_ful_vac_3 omitted because of collinearity.
+note: int_CFR_3 omitted because of collinearity.
+note: int_ICU_3 omitted because of collinearity.
+note: int_CCI_3 omitted because of collinearity.
+note: int_test_per_case_4 omitted because of collinearity.
+note: int_ful_vac_4 omitted because of collinearity.
+note: int_ICU_4 omitted because of collinearity.
+note: int_CCI_4 omitted because of collinearity.
+note: int_gov_resp_4 omitted because of collinearity.
+note: int_test_per_case_5 omitted because of collinearity.
+note: int_ful_vac_5 omitted because of collinearity.
+note: int_ICU_5 omitted because of collinearity.
+note: int_CCI_5 omitted because of collinearity.
+
+Linear regression                               Number of obs     =         60
+                                                F(39, 20)         =     209.93
+                                                Prob > F          =     0.0000
+                                                R-squared         =     0.9360
+                                                Root MSE          =     .05361
+
+-------------------------------------------------------------------------------------
+                    |               Robust
+                 HS | Coefficient  std. err.      t    P>|t|     [95% conf. interval]
+--------------------+----------------------------------------------------------------
+     country_dummy2 |   4.253866   .8767084     4.85   0.000     2.425084    6.082648
+     country_dummy3 |   3.209552    1.26232     2.54   0.019     .5763981    5.842706
+     country_dummy4 |   4.833198    1.05578     4.58   0.000     2.630878    7.035517
+     country_dummy5 |   4.118005   1.645485     2.50   0.021     .6855841    7.550427
+      test_per_case |  -.0010188   .0003125    -3.26   0.004    -.0016708   -.0003668
+            ful_vac |   .0009961    .000704     1.41   0.172    -.0004725    .0024647
+                CFR |  -.0035446   .0055182    -0.64   0.528    -.0150554    .0079662
+                ICU |  -.0023664   .0014039    -1.69   0.107    -.0052949    .0005621
+             unempl |    .252987   .0172613    14.66   0.000     .2169805    .2889935
+                CCI |   .0329789   .0096921     3.40   0.003     .0127614    .0531964
+           gov_resp |  -.0023067   .0036749    -0.63   0.537    -.0099725     .005359
+int_test_per_case_2 |   .0003486   .0003276     1.06   0.300    -.0003348    .0010321
+      int_ful_vac_2 |   .0004866   .0007672     0.63   0.533    -.0011137    .0020868
+          int_CFR_2 |          0  (omitted)
+          int_ICU_2 |  -.0029354   .0014806    -1.98   0.061    -.0060239    .0001531
+       int_unempl_2 |          0  (omitted)
+          int_CCI_2 |  -.0419549   .0105971    -3.96   0.001      -.06406   -.0198498
+     int_gov_resp_2 |          0  (omitted)
+int_test_per_case_3 |    .000489   .0004693     1.04   0.310    -.0004899    .0014679
+      int_ful_vac_3 |  -.0045624   .0010922    -4.18   0.000    -.0068407    -.002284
+          int_CFR_3 |          0  (omitted)
+          int_ICU_3 |          0  (omitted)
+       int_unempl_3 |          0  (omitted)
+          int_CCI_3 |  -.0213654   .0147387    -1.45   0.163    -.0521098     .009379
+     int_gov_resp_3 |          0  (omitted)
+int_test_per_case_4 |    .000145   .0004194     0.35   0.733    -.0007299    .0010198
+      int_ful_vac_4 |  -.0018386   .0011123    -1.65   0.114    -.0041589    .0004817
+          int_CFR_4 |          0  (omitted)
+          int_ICU_4 |   .0035954   .0016203     2.22   0.038     .0002155    .0069753
+       int_unempl_4 |          0  (omitted)
+          int_CCI_4 |  -.0428371   .0132104    -3.24   0.004    -.0703934   -.0152808
+     int_gov_resp_4 |   .0012994   .0038812     0.33   0.741    -.0067966    .0093953
+int_test_per_case_5 |     -.0027   .0021881    -1.23   0.232    -.0072644    .0018643
+      int_ful_vac_2 |          0  (omitted)
+          int_CFR_2 |          0  (omitted)
+          int_ICU_2 |          0  (omitted)
+       int_unempl_2 |  -.0440328   .0239503    -1.84   0.081    -.0939922    .0059267
+          int_CCI_2 |          0  (omitted)
+     int_gov_resp_2 |          0  (omitted)
+int_test_per_case_3 |          0  (omitted)
+      int_ful_vac_3 |          0  (omitted)
+          int_CFR_3 |          0  (omitted)
+          int_ICU_3 |  -.0004666   .0028155    -0.17   0.870    -.0063397    .0054065
+       int_unempl_3 |          0  (omitted)
+          int_CCI_3 |          0  (omitted)
+     int_gov_resp_3 |          0  (omitted)
+int_test_per_case_4 |          0  (omitted)
+      int_ful_vac_4 |          0  (omitted)
+          int_CFR_4 |          0  (omitted)
+          int_ICU_4 |          0  (omitted)
+       int_unempl_4 |          0  (omitted)
+          int_CCI_4 |          0  (omitted)
+     int_gov_resp_4 |          0  (omitted)
+int_test_per_case_5 |          0  (omitted)
+      int_ful_vac_5 |   .0065159   .0031654     2.06   0.053     -.000087    .0131188
+          int_CFR_2 |   .0292162   .0141421     2.07   0.052    -.0002837    .0587161
+          int_ICU_2 |          0  (omitted)
+       int_unempl_2 |          0  (omitted)
+          int_CCI_2 |          0  (omitted)
+     int_gov_resp_2 |          0  (omitted)
+int_test_per_case_3 |          0  (omitted)
+      int_ful_vac_3 |          0  (omitted)
+          int_CFR_3 |  -.1170419   .0403913    -2.90   0.009    -.2012967    -.032787
+          int_ICU_3 |          0  (omitted)
+       int_unempl_3 |          0  (omitted)
+          int_CCI_3 |          0  (omitted)
+     int_gov_resp_3 |          0  (omitted)
+int_test_per_case_4 |          0  (omitted)
+      int_ful_vac_4 |          0  (omitted)
+          int_CFR_4 |          0  (omitted)
+          int_ICU_4 |          0  (omitted)
+       int_unempl_4 |          0  (omitted)
+          int_CCI_4 |          0  (omitted)
+     int_gov_resp_4 |          0  (omitted)
+int_test_per_case_5 |          0  (omitted)
+      int_ful_vac_5 |          0  (omitted)
+          int_CFR_5 |          0  (omitted)
+          int_ICU_2 |          0  (omitted)
+       int_unempl_2 |          0  (omitted)
+          int_CCI_2 |          0  (omitted)
+     int_gov_resp_2 |          0  (omitted)
+int_test_per_case_3 |          0  (omitted)
+      int_ful_vac_3 |          0  (omitted)
+          int_CFR_3 |          0  (omitted)
+          int_ICU_3 |          0  (omitted)
+       int_unempl_3 |          0  (omitted)
+          int_CCI_3 |          0  (omitted)
+     int_gov_resp_3 |          0  (omitted)
+int_test_per_case_4 |          0  (omitted)
+      int_ful_vac_4 |          0  (omitted)
+          int_CFR_4 |          0  (omitted)
+          int_ICU_4 |          0  (omitted)
+       int_unempl_4 |          0  (omitted)
+          int_CCI_4 |          0  (omitted)
+     int_gov_resp_4 |          0  (omitted)
+int_test_per_case_5 |          0  (omitted)
+      int_ful_vac_5 |          0  (omitted)
+          int_CFR_5 |          0  (omitted)
+          int_ICU_5 |   .0030918   .0052725     0.59   0.564    -.0079065    .0140902
+       int_unempl_2 |          0  (omitted)
+          int_CCI_2 |          0  (omitted)
+     int_gov_resp_2 |          0  (omitted)
+int_test_per_case_3 |          0  (omitted)
+      int_ful_vac_3 |          0  (omitted)
+          int_CFR_3 |          0  (omitted)
+          int_ICU_3 |          0  (omitted)
+       int_unempl_3 |          0  (omitted)
+          int_CCI_3 |          0  (omitted)
+     int_gov_resp_3 |          0  (omitted)
+int_test_per_case_4 |          0  (omitted)
+      int_ful_vac_4 |          0  (omitted)
+          int_CFR_4 |          0  (omitted)
+          int_ICU_4 |          0  (omitted)
+       int_unempl_4 |          0  (omitted)
+          int_CCI_4 |          0  (omitted)
+     int_gov_resp_4 |          0  (omitted)
+int_test_per_case_5 |          0  (omitted)
+      int_ful_vac_5 |          0  (omitted)
+          int_CFR_5 |          0  (omitted)
+          int_ICU_5 |          0  (omitted)
+       int_unempl_5 |          0  (omitted)
+          int_CCI_2 |          0  (omitted)
+     int_gov_resp_2 |          0  (omitted)
+int_test_per_case_3 |          0  (omitted)
+      int_ful_vac_3 |          0  (omitted)
+          int_CFR_3 |          0  (omitted)
+          int_ICU_3 |          0  (omitted)
+       int_unempl_3 |          0  (omitted)
+          int_CCI_3 |          0  (omitted)
+     int_gov_resp_3 |          0  (omitted)
+int_test_per_case_4 |          0  (omitted)
+      int_ful_vac_4 |          0  (omitted)
+          int_CFR_4 |          0  (omitted)
+          int_ICU_4 |          0  (omitted)
+       int_unempl_4 |          0  (omitted)
+          int_CCI_4 |          0  (omitted)
+     int_gov_resp_4 |          0  (omitted)
+int_test_per_case_5 |          0  (omitted)
+      int_ful_vac_5 |          0  (omitted)
+          int_CFR_5 |          0  (omitted)
+          int_ICU_5 |          0  (omitted)
+       int_unempl_5 |          0  (omitted)
+          int_CCI_5 |   -.063333   .0272455    -2.32   0.031    -.1201661      -.0065
+     int_gov_resp_2 |  -.0003011   .0037721    -0.08   0.937    -.0081695    .0075673
+int_test_per_case_3 |          0  (omitted)
+      int_ful_vac_3 |          0  (omitted)
+          int_CFR_3 |          0  (omitted)
+          int_ICU_3 |          0  (omitted)
+       int_unempl_3 |    .106408   .0591756     1.80   0.087    -.0170301    .2298461
+          int_CCI_3 |          0  (omitted)
+     int_gov_resp_3 |  -.0076138   .0041576    -1.83   0.082    -.0162864    .0010589
+int_test_per_case_4 |          0  (omitted)
+      int_ful_vac_4 |          0  (omitted)
+          int_CFR_4 |   -.142245   .0330775    -4.30   0.000    -.2112434   -.0732466
+          int_ICU_4 |          0  (omitted)
+       int_unempl_4 |   .1487003   .0804332     1.85   0.079    -.0190804     .316481
+          int_CCI_4 |          0  (omitted)
+     int_gov_resp_4 |          0  (omitted)
+int_test_per_case_5 |          0  (omitted)
+      int_ful_vac_5 |          0  (omitted)
+          int_CFR_5 |   .0111165   .1051164     0.11   0.917    -.2081525    .2303856
+          int_ICU_5 |          0  (omitted)
+       int_unempl_5 |   -.003532   .0834887    -0.04   0.967    -.1776864    .1706223
+          int_CCI_5 |          0  (omitted)
+     int_gov_resp_5 |   .0012336   .0050322     0.25   0.809    -.0092633    .0117305
+              _cons |  -4.324207   .8099702    -5.34   0.000    -6.013775   -2.634639
+-------------------------------------------------------------------------------------
+
+. 
+end of do-file
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. xtreg HS c.test_per_case c.ful_vac c.CFR c.ICU c.unempl c.CCI c.gov_resp, fe robust 
+
+Fixed-effects (within) regression               Number of obs     =         60
+Group variable: country                         Number of groups  =          5
+
+R-squared:                                      Obs per group:
+     Within  = 0.4831                                         min =         12
+     Between = 0.2679                                         avg =       12.0
+     Overall = 0.0116                                         max =         12
+
+                                                F(4, 4)           =          .
+corr(u_i, Xb) = -0.9740                         Prob > F          =          .
+
+                                 (Std. err. adjusted for 5 clusters in country)
+-------------------------------------------------------------------------------
+              |               Robust
+           HS | Coefficient  std. err.      t    P>|t|     [95% conf. interval]
+--------------+----------------------------------------------------------------
+test_per_case |  -.0008279   .0001104    -7.50   0.002    -.0011344   -.0005214
+      ful_vac |   .0012656   .0006918     1.83   0.141    -.0006552    .0031864
+          CFR |   .0146169   .0240427     0.61   0.576    -.0521362    .0813701
+          ICU |   -.004172   .0008389    -4.97   0.008    -.0065011   -.0018428
+       unempl |   .0941781   .0225568     4.18   0.014     .0315505    .1568058
+          CCI |   .0089346    .001883     4.74   0.009     .0037066    .0141626
+     gov_resp |   .0010772   .0010128     1.06   0.347    -.0017348    .0038891
+        _cons |  -.9126081   .2921496    -3.12   0.035    -1.723746   -.1014707
+--------------+----------------------------------------------------------------
+      sigma_u |  .41680031
+      sigma_e |  .09789735
+          rho |  .94771654   (fraction of variance due to u_i)
+-------------------------------------------------------------------------------
+
+. 
+end of do-file
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. twoway (scatter test_per_case HS if quarter == 1, mcolor(blue)) ///
+>        (scatter test_per_case HS if quarter == 2, mcolor(red)) ///
+>        (scatter test_per_case HS if quarter == 3, mcolor(green)) ///
+>        (scatter test_per_case HS if quarter == 4, mcolor(orange)), ///
+>        title("Change in Health System Performance Index vs. Tests per Confirmed Case") ///
+>        xtitle("Health System Performance Index") ytitle("Tests per Confirmed Case") ///
+>        legend(order(1 "Q1" 2 "Q2" 3 "Q3" 4 "Q4"))
+
+. 
+end of do-file
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. twoway (scatter test_per_case HS if quarter <= 4, mcolor(blue)) ///
+>        (scatter test_per_case HS if quarter > 4 & quarter <= 8, mcolor(red)) ///
+>        (scatter test_per_case HS if quarter > 8, mcolor(green)), ///
+>        title("Change in Health System Performance Index vs. Tests per Confirmed Case") ///
+>        xtitle("Health System Performance Index") ytitle("Tests per Confirmed Case") ///
+>        legend(order(1 "Q1-Q4" 2 "Q5-Q8" 3 "Q9-Q12"))
+
+. 
+end of do-file
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. graph export "/Users/Ferniz/Documents/LSE /HP434/case.pdf", replace
+file /Users/Ferniz/Documents/LSE /HP434/case.pdf saved as PDF format
+
+. 
+end of do-file
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. twoway (scatter ful_vac HS if quarter <= 4, mcolor(blue)) ///
+>        (scatter ful_vac HS if quarter > 4 & quarter <= 8, mcolor(red)) ///
+>        (scatter ful_vac HS if quarter > 8, mcolor(green)), ///
+>        title("Change in Health System Performance Index vs. Fully Vaccinated Population per 100") ///
+>        xtitle("Health System Performance Index") ytitle("Fully Vaccinated Population per 100") ///
+>        legend(order(1 "Q1-Q4" 2 "Q5-Q8" 3 "Q9-Q12"))
+
+. 
+end of do-file
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. graph export "/Users/Ferniz/Documents/LSE /HP434/vac.pdf", replace
+file /Users/Ferniz/Documents/LSE /HP434/vac.pdf saved as PDF format
+
+. 
+end of do-file
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. xtline HS, overlay legend(lab(1 "France") lab(2 "Italy") lab(3 "UK") lab(4 "Germany") lab(5 "Spain"))
+>  ///
+>        title("Change in Health System Performance Index by Country") ///
+>        xtitle("Quarter") ytitle("Health System Performance Index")
+
+. 
+end of do-file
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. graph export "/Users/Ferniz/Documents/LSE /HP434/HS.pdf", replace          
+no Graph window open
+r(601);
+
+end of do-file
+
+r(601);
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. twoway (scatter CCI HS if quarter <= 4, mcolor(blue)) ///
+>        (scatter CCI HS if quarter > 4 & quarter <= 8, mcolor(red)) ///
+>        (scatter CCI HS if quarter > 8, mcolor(green)), ///
+>        title("Change in Health System Performance Index vs. Consumer Confidence Index") ///
+>        xtitle("Health System Performance Index") ytitle("Consumer Confidence Index") ///
+>        legend(order(1 "Q1-Q4" 2 "Q5-Q8" 3 "Q9-Q12"))
+
+. graph export "/Users/Ferniz/Documents/LSE /HP434/vac.pdf", replace
+file /Users/Ferniz/Documents/LSE /HP434/vac.pdf saved as PDF format
+
+. 
+end of do-file
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. twoway (scatter CCI HS if quarter <= 4, mcolor(blue)) ///
+>        (scatter CCI HS if quarter > 4 & quarter <= 8, mcolor(red)) ///
+>        (scatter CCI HS if quarter > 8, mcolor(green)), ///
+>        title("Change in Health System Performance Index vs. Consumer Confidence Index") ///
+>        xtitle("Health System Performance Index") ytitle("Consumer Confidence Index") ///
+>        legend(order(1 "Q1-Q4" 2 "Q5-Q8" 3 "Q9-Q12"))
+
+. graph export "/Users/Ferniz/Documents/LSE /HP434/CCI.pdf", replace
+file /Users/Ferniz/Documents/LSE /HP434/CCI.pdf saved as PDF format
+
+. 
+end of do-file
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. twoway (scatter CFR HS if quarter <= 4, mcolor(blue)) ///
+>        (scatter CFR HS if quarter > 4 & quarter <= 8, mcolor(red)) ///
+>        (scatter CFR HS if quarter > 8, mcolor(green)), ///
+>        title("Change in Health System Performance Index vs. Case Fatality Rate") ///
+>        xtitle("Health System Performance Index") ytitle("Case Fatality Rate") ///
+>        legend(order(1 "Q1-Q4" 2 "Q5-Q8" 3 "Q9-Q12"))
+
+. graph export "/Users/Ferniz/Documents/LSE /HP434/vac.pdf", replace         
+file /Users/Ferniz/Documents/LSE /HP434/vac.pdf saved as PDF format
+
+. 
+end of do-file
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. twoway (scatter ful_vac HS if quarter <= 4, mcolor(blue)) ///
+>        (scatter ful_vac HS if quarter > 4 & quarter <= 8, mcolor(red)) ///
+>        (scatter ful_vac HS if quarter > 8, mcolor(green)), ///
+>        title("Change in Health System Performance Index vs. Fully Vaccinated Population per 100") ///
+>        xtitle("Health System Performance Index") ytitle("Fully Vaccinated Population per 100") ///
+>        legend(order(1 "Q1-Q4" 2 "Q5-Q8" 3 "Q9-Q12"))
+
+. graph export "/Users/Ferniz/Documents/LSE /HP434/vac.pdf", replace
+file /Users/Ferniz/Documents/LSE /HP434/vac.pdf saved as PDF format
+
+. 
+end of do-file
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. twoway (scatter CFR HS if quarter <= 4, mcolor(blue)) ///
+>        (scatter CFR HS if quarter > 4 & quarter <= 8, mcolor(red)) ///
+>        (scatter CFR HS if quarter > 8, mcolor(green)), ///
+>        title("Change in Health System Performance Index vs. Case Fatality Rate") ///
+>        xtitle("Health System Performance Index") ytitle("Case Fatality Rate") ///
+>        legend(order(1 "Q1-Q4" 2 "Q5-Q8" 3 "Q9-Q12"))
+
+. graph export "/Users/Ferniz/Documents/LSE /HP434/CFR.pdf", replace         
+file /Users/Ferniz/Documents/LSE /HP434/CFR.pdf saved as PDF format
+
+.            
+. 
+end of do-file
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. twoway (scatter ICU HS if quarter <= 4, mcolor(blue)) ///
+>        (scatter ICU HS if quarter > 4 & quarter <= 8, mcolor(red)) ///
+>        (scatter ICU HS if quarter > 8, mcolor(green)), ///
+>        title("Change in Health System Performance Index vs. ICU Occupancy per Million") ///
+>        xtitle("Health System Performance Index") ytitle("ICU Occupancy per Million") ///
+>        legend(order(1 "Q1-Q4" 2 "Q5-Q8" 3 "Q9-Q12"))
+
+. graph export "/Users/Ferniz/Documents/LSE /HP434/ICU.pdf", replace      
+file /Users/Ferniz/Documents/LSE /HP434/ICU.pdf saved as PDF format
+
+. 
+end of do-file
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. twoway (scatter unempl HS if quarter <= 4, mcolor(blue)) ///
+>        (scatter unempl HS if quarter > 4 & quarter <= 8, mcolor(red)) ///
+>        (scatter unempl HS if quarter > 8, mcolor(green)), ///
+>        title("Change in Health System Performance Index vs. Unemployment Rate") ///
+>        xtitle("Health System Performance Index") ytitle("Unemployment Rate") ///
+>        legend(order(1 "Q1-Q4" 2 "Q5-Q8" 3 "Q9-Q12"))    
+
+. graph export "/Users/Ferniz/Documents/LSE /HP434/unempl.pdf", replace
+file /Users/Ferniz/Documents/LSE /HP434/unempl.pdf saved as PDF format
+
+. 
+end of do-file
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. xtline HS, overlay legend(lab(1 "France") lab(2 "Italy") lab(3 "UK") lab(4 "Germany") lab(5 "Spain"))
+>  ///
+>        title("Change in Health System Performance Index by Country") ///
+>        xtitle("Quarter") ytitle("Health System Performance Index")
+
+. graph export "/Users/Ferniz/Documents/LSE /HP434/HS.pdf", replace          
+file /Users/Ferniz/Documents/LSE /HP434/HS.pdf saved as PDF format
+
+. 
+end of do-file
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. twoway (scatter unempl HS if quarter <= 4, mcolor(blue)) ///
+>        (scatter unempl HS if quarter > 4 & quarter <= 8, mcolor(red)) ///
+>        (scatter unempl HS if quarter > 8, mcolor(green)), ///
+>        title("Change in Health System Performance Index 
+parentheses do not balance
+r(198);
+
+end of do-file
+
+r(198);
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. twoway (scatter unempl HS if quarter <= 4, mcolor(blue)) ///
+>        (scatter unempl HS if quarter > 4 & quarter <= 8, mcolor(red)) ///
+>        (scatter unempl HS if quarter > 8, mcolor(green)), ///
+>        title("Change in Health System Performance Index 
+parentheses do not balance
+r(198);
+
+end of do-file
+
+r(198);
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. twoway (scatter unempl HS if quarter <= 4, mcolor(blue)) ///
+>        (scatter unempl HS if quarter > 4 & quarter <= 8, mcolor(red)) ///
+>        (scatter unempl HS if quarter > 8, mcolor(green)), ///
+>        title("Change in Health System Performance Index ///
+parentheses do not balance
+r(198);
+
+end of do-file
+
+r(198);
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. twoway (scatter unempl HS if quarter <= 4, mcolor(blue)) ///
+>        (scatter unempl HS if quarter > 4 & quarter <= 8, mcolor(red)) ///
+>        (scatter unempl HS if quarter > 8, mcolor(green)), ///
+>        title("Change in Health System Performance Index vs. Unemployment Rate") ///
+>        xtitle("Health System Performance Index") ytitle("Unemployment Rate") ///
+>        legend(order(1 "Q1-Q4" 2 "Q5-Q8" 3 "Q9-Q12"))    
+
+. 
+end of do-file
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. twoway (scatter ful_vac HS if quarter <= 4, mcolor(blue)) ///
+>        (scatter ful_vac HS if quarter > 4 & quarter <= 8, mcolor(red)) ///
+>        (scatter ful_vac HS if quarter > 8, mcolor(green)), ///
+>        title("Change in Health System Performance Index vs. Fully Vaccinated Population per 100") ///
+>        xtitle("Health System Performance Index") ytitle("Fully Vaccinated Population per 100") ///leg
+> end(order(1 "Q1-Q4" 2 "Q5-Q8" 3 "Q9-Q12"))
+
+end of do-file
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. twoway (scatter ful_vac HS if quarter <= 4, mcolor(blue)) ///
+>        (scatter ful_vac HS if quarter > 4 & quarter <= 8, mcolor(red)) ///
+>        (scatter ful_vac HS if quarter > 8, mcolor(green)), ///
+>        title("Change in Health System Performance Index vs. Fully Vaccinated Population per 100") ///
+>        xtitle("Health System Performance Index") ytitle("Fully Vaccinated Population per 100") ///leg
+> end(order(1 "Q1-Q4" 2 "Q5-Q8" 3 "Q9-Q12"))
+
+end of do-file
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. twoway (scatter ful_vac HS if quarter <= 4, mcolor(blue)) ///
+>        (scatter ful_vac HS if quarter > 4 & quarter <= 8, mcolor(red)) ///
+>        (scatter ful_vac HS if quarter > 8, mcolor(green)), ///
+>        title("Change in Health System Performance Index vs. Fully Vaccinated Population per 100") ///
+>        xtitle("Health System Performance Index") ytitle("Fully Vaccinated Population per 100") ///leg
+> end(order(1 "Q1-Q4" 2 "Q5-Q8" 3 "Q9-Q12"))
+
+end of do-file
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. twoway (scatter ful_vac HS if quarter <= 4, mcolor(blue)) ///
+>        (scatter ful_vac HS if quarter > 4 & quarter <= 8, mcolor(red)) ///
+>        (scatter ful_vac HS if quarter > 8, mcolor(green)), ///
+>        title("Change in Health System Performance Index vs. Fully Vaccinated Population per 100") ///
+>        xtitle("Health System Performance Index") ytitle("Fully Vaccinated Population per 100") ///
+>            legend(order(1 "Q1-Q4" 2 "Q5-Q8" 3 "Q9-Q12"))
+
+. 
+end of do-file
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. twoway (scatter ful_vac HS if quarter <= 4, mcolor(blue)) ///
+>        (scatter ful_vac HS if quarter > 4 & quarter <= 8, mcolor(red)) ///
+>        (scatter ful_vac HS if quarter > 8, mcolor(green)), ///
+>        title("Change in Health System Performance Index" "vs. Fully Vaccinated Population per 100", s
+> ize(medium)) ///
+>        xtitle("Health System Performance Index") ytitle("Fully Vaccinated Population per 100") ///
+>        legend(order(1 "Q1-Q4" 2 "Q5-Q8" 3 "Q9-Q12"))
+
+. 
+end of do-file
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. graph export "/Users/Ferniz/Documents/LSE /HP434/vac.pdf", replace
+file /Users/Ferniz/Documents/LSE /HP434/vac.pdf saved as PDF format
+
+. 
+end of do-file
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. twoway (scatter ICU HS if quarter <= 4, mcolor(blue)) ///
+>        (scatter ICU HS if quarter > 4 & quarter <= 8, mcolor(red)) ///
+>        (scatter ICU HS if quarter > 8, mcolor(green)), ///
+>        title("Change in Health System Performance Index" "vs. ICU Occupancy per Million") ///
+>        xtitle("Health System Performance Index") ytitle("ICU Occupancy per Million") ///
+>        legend(order(1 "Q1-Q4" 2 "Q5-Q8" 3 "Q9-Q12"))
+
+. 
+end of do-file
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. graph export "/Users/Ferniz/Documents/LSE /HP434/ICU.pdf", replace      
+file /Users/Ferniz/Documents/LSE /HP434/ICU.pdf saved as PDF format
+
+. 
+end of do-file
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. twoway (scatter test_per_case HS if quarter <= 4, mcolor(blue)) ///
+>        (scatter test_per_case HS if quarter > 4 & quarter <= 8, mcolor(red)) ///
+>        (scatter test_per_case HS if quarter > 8, mcolor(green)), ///
+>        title("Change in Health System Performance Index" "vs. Tests per Confirmed Case") ///
+>        xtitle("Health System Performance Index") ytitle("Tests per Confirmed Case") ///
+>        legend(order(1 "Q1-Q4" 2 "Q5-Q8" 3 "Q9-Q12"))
+
+. 
+end of do-file
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. graph export "/Users/Ferniz/Documents/LSE /HP434/case.pdf", replace
+file /Users/Ferniz/Documents/LSE /HP434/case.pdf saved as PDF format
+
+. 
+end of do-file
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. twoway (scatter CCI HS if quarter <= 4, mcolor(blue)) ///
+>        (scatter CCI HS if quarter > 4 & quarter <= 8, mcolor(red)) ///
+>        (scatter CCI HS if quarter > 8, mcolor(green)), ///
+>        title("Change in Health System Performance Index" "vs. Consumer Confidence Index") ///
+>        xtitle("Health System Performance Index") ytitle("Consumer Confidence Index") ///
+>        legend(order(1 "Q1-Q4" 2 "Q5-Q8" 3 "Q9-Q12"))
+
+. graph export "/Users/Ferniz/Documents/LSE /HP434/CCI.pdf", replace
+file /Users/Ferniz/Documents/LSE /HP434/CCI.pdf saved as PDF format
+
+. 
+end of do-file
+
+. use "/Users/Ferniz/Documents/LSE /HP425/Assessment Information/HP425_summative dataset_2023-24.dta", 
+> clear
+
+. use "/Users/Ferniz/Documents/LSE /HP425/Seminar_Week3_OLS/HP425_Seminar1_star
+> ting_dataset.dta"
+
+. use "/Users/Ferniz/Documents/LSE /HP425/Assessment Information/HP425_summativ
+> e dataset_2023-24.dta"
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. describe
+
+Contains data from /Users/Ferniz/Documents/LSE /HP425/Assessment Information/HP
+> 425_summative dataset_2023-24.dta
+ Observations:         2,708                  
+    Variables:            13                  12 Mar 2024 13:10
+-------------------------------------------------------------------------------
+Variable      Storage   Display    Value
+    name         type    format    label      Variable label
+-------------------------------------------------------------------------------
+patientid       str8    %9s                   Patient id
+edeathdate      int     %td                   Date of death
+eadmdate        float   %td                   Date of admission to hospital
+edisdate        float   %td                   Date of discharge from hospital
+elastdate       float   %td                   Date of end of studyperiod
+hospdeath       float   %9.0g                 Died in hospital
+agedeathyrs     float   %9.0g                 Age at death in years
+comorb          float   %9.0g      yesno      Has comorbidities
+num_comorb      float   %9.0g                 Number of co-morbidities
+oper            float   %9.0g      yesno      Had an operation
+female          float   %9.0g      sex        Sex
+ageyrs          float   %9.0g                 Age in years
+discharged      float   %9.0g      yesno      Discharged from hospital
+-------------------------------------------------------------------------------
+Sorted by: 
+
+. 
+end of do-file
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. codebook
+
+-------------------------------------------------------------------------------
+patientid                                                            Patient id
+-------------------------------------------------------------------------------
+
+                  Type: String (str8)
+
+         Unique values: 2,708                     Missing "": 0/2,708
+
+              Examples: "00969999"
+                        "03050478"
+                        "04241754"
+                        "04619092"
+
+-------------------------------------------------------------------------------
+edeathdate                                                        Date of death
+-------------------------------------------------------------------------------
+
+                  Type: Numeric daily date (int)
+
+                 Range: [7674,16146]                  Units: 1
+       Or equivalently: [04jan1981,16mar2004]         Units: days
+         Unique values: 1,978                     Missing .: 322/2,708
+
+                  Mean: 10634.8 = 11feb1989(+ 19 hours)
+             Std. dev.: 2364.84
+           Percentiles:       10%        25%        50%        75%        90%
+                             8063       8511      10008      12356      14425
+                        28jan1982  21apr1983  27may1987  30oct1993  30jun1999
+
+-------------------------------------------------------------------------------
+eadmdate                                          Date of admission to hospital
+-------------------------------------------------------------------------------
+
+                  Type: Numeric daily date (float)
+
+                 Range: [7671,8400]                   Units: 1
+       Or equivalently: [01jan1981,31dec1982]         Units: days
+         Unique values: 713                       Missing .: 0/2,708
+
+                  Mean: 8020.23 = 16dec1981(+ 6 hours)
+             Std. dev.: 211.324
+           Percentiles:       10%        25%        50%        75%        90%
+                             7729       7833       8020     8193.5       8319
+                        28feb1981  12jun1981  16dec1981  07jun1982  11oct1982
+
+-------------------------------------------------------------------------------
+edisdate                                        Date of discharge from hospital
+-------------------------------------------------------------------------------
+
+                  Type: Numeric daily date (float)
+
+                 Range: [7673,8400]                   Units: 1
+       Or equivalently: [03jan1981,31dec1982]         Units: days
+         Unique values: 693                       Missing .: 72/2,708
+
+                  Mean: 8028.31 = 24dec1981(+ 7 hours)
+             Std. dev.: 208.152
+           Percentiles:       10%        25%        50%        75%        90%
+                             7740     7843.5       8028       8197       8322
+                        11mar1981  22jun1981  24dec1981  11jun1982  14oct1982
+
+-------------------------------------------------------------------------------
+elastdate                                            Date of end of studyperiod
+-------------------------------------------------------------------------------
+
+                  Type: Numeric daily date (float)
+
+                 Range: [8400,8400]                   Units: 1
+       Or equivalently: [31dec1982,31dec1982]         Units: days
+         Unique values: 1                         Missing .: 0/2,708
+
+            Tabulation: Freq.  Value
+                        2,708  8400   31dec1982
+
+-------------------------------------------------------------------------------
+hospdeath                                                      Died in hospital
+-------------------------------------------------------------------------------
+
+                  Type: Numeric (float)
+
+                 Range: [0,1]                         Units: 1
+         Unique values: 2                         Missing .: 0/2,708
+
+            Tabulation: Freq.  Value
+                        2,443  0
+                          265  1
+
+-------------------------------------------------------------------------------
+agedeathyrs                                               Age at death in years
+-------------------------------------------------------------------------------
+
+                  Type: Numeric (float)
+
+                 Range: [37.642712,104.8241]          Units: 1.000e-06
+         Unique values: 2,176                     Missing .: 322/2,708
+
+                  Mean:  73.269
+             Std. dev.:  9.8927
+
+           Percentiles:     10%       25%       50%       75%       90%
+                        60.0986   66.9432   74.0698   80.4381   85.3552
+
+-------------------------------------------------------------------------------
+comorb                                                        Has comorbidities
+-------------------------------------------------------------------------------
+
+                  Type: Numeric (float)
+                 Label: yesno
+
+                 Range: [0,1]                         Units: 1
+         Unique values: 2                         Missing .: 0/2,708
+
+            Tabulation: Freq.   Numeric  Label
+                          867         0  No
+                        1,841         1  Yes
+
+-------------------------------------------------------------------------------
+num_comorb                                             Number of co-morbidities
+-------------------------------------------------------------------------------
+
+                  Type: Numeric (float)
+
+                 Range: [0,2]                         Units: 1
+         Unique values: 3                         Missing .: 0/2,708
+
+            Tabulation: Freq.  Value
+                          867  0
+                        1,129  1
+                          712  2
+
+-------------------------------------------------------------------------------
+oper                                                           Had an operation
+-------------------------------------------------------------------------------
+
+                  Type: Numeric (float)
+                 Label: yesno
+
+                 Range: [0,1]                         Units: 1
+         Unique values: 2                         Missing .: 0/2,708
+
+            Tabulation: Freq.   Numeric  Label
+                        2,629         0  No
+                           79         1  Yes
+
+-------------------------------------------------------------------------------
+female                                                                      Sex
+-------------------------------------------------------------------------------
+
+                  Type: Numeric (float)
+                 Label: sex
+
+                 Range: [0,1]                         Units: 1
+         Unique values: 2                         Missing .: 0/2,708
+
+            Tabulation: Freq.   Numeric  Label
+                        1,426         0  Male
+                        1,282         1  Female
+
+-------------------------------------------------------------------------------
+ageyrs                                                             Age in years
+-------------------------------------------------------------------------------
+
+                  Type: Numeric (float)
+
+                 Range: [21.138947,101.06776]         Units: 1.000e-06
+         Unique values: 2,472                     Missing .: 0/2,708
+
+                  Mean: 64.4672
+             Std. dev.: 11.9194
+
+           Percentiles:     10%       25%       50%       75%       90%
+                         48.397   55.8987   65.3854   73.5044   79.6249
+
+-------------------------------------------------------------------------------
+discharged                                             Discharged from hospital
+-------------------------------------------------------------------------------
+
+                  Type: Numeric (float)
+                 Label: yesno
+
+                 Range: [0,1]                         Units: 1
+         Unique values: 2                         Missing .: 0/2,708
+
+            Tabulation: Freq.   Numeric  Label
+                           72         0  No
+                        2,636         1  Yes
+
+. 
+end of do-file
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. codebook
+
+-------------------------------------------------------------------------------
+patientid                                                            Patient id
+-------------------------------------------------------------------------------
+
+                  Type: String (str8)
+
+         Unique values: 2,708                     Missing "": 0/2,708
+
+              Examples: "00969999"
+                        "03050478"
+                        "04241754"
+                        "04619092"
+
+-------------------------------------------------------------------------------
+edeathdate                                                        Date of death
+-------------------------------------------------------------------------------
+
+                  Type: Numeric daily date (int)
+
+                 Range: [7674,16146]                  Units: 1
+       Or equivalently: [04jan1981,16mar2004]         Units: days
+         Unique values: 1,978                     Missing .: 322/2,708
+
+                  Mean: 10634.8 = 11feb1989(+ 19 hours)
+             Std. dev.: 2364.84
+           Percentiles:       10%        25%        50%        75%        90%
+                             8063       8511      10008      12356      14425
+                        28jan1982  21apr1983  27may1987  30oct1993  30jun1999
+
+-------------------------------------------------------------------------------
+eadmdate                                          Date of admission to hospital
+-------------------------------------------------------------------------------
+
+                  Type: Numeric daily date (float)
+
+                 Range: [7671,8400]                   Units: 1
+       Or equivalently: [01jan1981,31dec1982]         Units: days
+         Unique values: 713                       Missing .: 0/2,708
+
+                  Mean: 8020.23 = 16dec1981(+ 6 hours)
+             Std. dev.: 211.324
+           Percentiles:       10%        25%        50%        75%        90%
+                             7729       7833       8020     8193.5       8319
+                        28feb1981  12jun1981  16dec1981  07jun1982  11oct1982
+
+-------------------------------------------------------------------------------
+edisdate                                        Date of discharge from hospital
+-------------------------------------------------------------------------------
+
+                  Type: Numeric daily date (float)
+
+                 Range: [7673,8400]                   Units: 1
+       Or equivalently: [03jan1981,31dec1982]         Units: days
+         Unique values: 693                       Missing .: 72/2,708
+
+                  Mean: 8028.31 = 24dec1981(+ 7 hours)
+             Std. dev.: 208.152
+           Percentiles:       10%        25%        50%        75%        90%
+                             7740     7843.5       8028       8197       8322
+                        11mar1981  22jun1981  24dec1981  11jun1982  14oct1982
+
+-------------------------------------------------------------------------------
+elastdate                                            Date of end of studyperiod
+-------------------------------------------------------------------------------
+
+                  Type: Numeric daily date (float)
+
+                 Range: [8400,8400]                   Units: 1
+       Or equivalently: [31dec1982,31dec1982]         Units: days
+         Unique values: 1                         Missing .: 0/2,708
+
+            Tabulation: Freq.  Value
+                        2,708  8400   31dec1982
+
+-------------------------------------------------------------------------------
+hospdeath                                                      Died in hospital
+-------------------------------------------------------------------------------
+
+                  Type: Numeric (float)
+
+                 Range: [0,1]                         Units: 1
+         Unique values: 2                         Missing .: 0/2,708
+
+            Tabulation: Freq.  Value
+                        2,443  0
+                          265  1
+
+-------------------------------------------------------------------------------
+agedeathyrs                                               Age at death in years
+-------------------------------------------------------------------------------
+
+                  Type: Numeric (float)
+
+                 Range: [37.642712,104.8241]          Units: 1.000e-06
+         Unique values: 2,176                     Missing .: 322/2,708
+
+                  Mean:  73.269
+             Std. dev.:  9.8927
+
+           Percentiles:     10%       25%       50%       75%       90%
+                        60.0986   66.9432   74.0698   80.4381   85.3552
+
+-------------------------------------------------------------------------------
+comorb                                                        Has comorbidities
+-------------------------------------------------------------------------------
+
+                  Type: Numeric (float)
+                 Label: yesno
+
+                 Range: [0,1]                         Units: 1
+         Unique values: 2                         Missing .: 0/2,708
+
+            Tabulation: Freq.   Numeric  Label
+                          867         0  No
+                        1,841         1  Yes
+
+-------------------------------------------------------------------------------
+num_comorb                                             Number of co-morbidities
+-------------------------------------------------------------------------------
+
+                  Type: Numeric (float)
+
+                 Range: [0,2]                         Units: 1
+         Unique values: 3                         Missing .: 0/2,708
+
+            Tabulation: Freq.  Value
+                          867  0
+                        1,129  1
+                          712  2
+
+-------------------------------------------------------------------------------
+oper                                                           Had an operation
+-------------------------------------------------------------------------------
+
+                  Type: Numeric (float)
+                 Label: yesno
+
+                 Range: [0,1]                         Units: 1
+         Unique values: 2                         Missing .: 0/2,708
+
+            Tabulation: Freq.   Numeric  Label
+                        2,629         0  No
+                           79         1  Yes
+
+-------------------------------------------------------------------------------
+female                                                                      Sex
+-------------------------------------------------------------------------------
+
+                  Type: Numeric (float)
+                 Label: sex
+
+                 Range: [0,1]                         Units: 1
+         Unique values: 2                         Missing .: 0/2,708
+
+            Tabulation: Freq.   Numeric  Label
+                        1,426         0  Male
+                        1,282         1  Female
+
+-------------------------------------------------------------------------------
+ageyrs                                                             Age in years
+-------------------------------------------------------------------------------
+
+                  Type: Numeric (float)
+
+                 Range: [21.138947,101.06776]         Units: 1.000e-06
+         Unique values: 2,472                     Missing .: 0/2,708
+
+                  Mean: 64.4672
+             Std. dev.: 11.9194
+
+           Percentiles:     10%       25%       50%       75%       90%
+                         48.397   55.8987   65.3854   73.5044   79.6249
+
+-------------------------------------------------------------------------------
+discharged                                             Discharged from hospital
+-------------------------------------------------------------------------------
+
+                  Type: Numeric (float)
+                 Label: yesno
+
+                 Range: [0,1]                         Units: 1
+         Unique values: 2                         Missing .: 0/2,708
+
+            Tabulation: Freq.   Numeric  Label
+                           72         0  No
+                        2,636         1  Yes
+
+. 
+end of do-file
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. summarize
+
+    Variable |        Obs        Mean    Std. dev.       Min        Max
+-------------+---------------------------------------------------------
+   patientid |          0
+  edeathdate |      2,386     10634.8    2364.842       7674      16146
+    eadmdate |      2,708    8020.233    211.3238       7671       8400
+    edisdate |      2,636    8028.309    208.1523       7673       8400
+   elastdate |      2,708        8400           0       8400       8400
+-------------+---------------------------------------------------------
+   hospdeath |      2,708    .0978582    .2971777          0          1
+ agedeathyrs |      2,386    73.26899      9.8927   37.64271   104.8241
+      comorb |      2,708    .6798375     .466625          0          1
+  num_comorb |      2,708    .9427622    .7615938          0          2
+        oper |      2,708    .0291728    .1683218          0          1
+-------------+---------------------------------------------------------
+      female |      2,708    .4734121    .4993848          0          1
+      ageyrs |      2,708    64.46719    11.91941   21.13895   101.0678
+  discharged |      2,708    .9734121    .1609054          0          1
+
+. 
+end of do-file
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. misstable sum 
+                                                               Obs<.
+                                                +------------------------------
+               |                                | Unique
+      Variable |     Obs=.     Obs>.     Obs<.  | values        Min         Max
+  -------------+--------------------------------+------------------------------
+    edeathdate |       322               2,386  |   >500       7674       16146
+      edisdate |        72               2,636  |   >500       7673        8400
+   agedeathyrs |       322               2,386  |   >500   37.64271    104.8241
+  -----------------------------------------------------------------------------
+
+. 
+end of do-file
+
+. do "/var/folders/t7/1mhmwbrd11b52z7yywq8g96h0000gn/T//SD86423.000000"
+
+. clear all
+
+. set more off
+
+. 
+. cd "/Users/Ferniz/Documents/LSE /HP425"
+/Users/Ferniz/Documents/LSE /HP425
+
+. 
+. capture log close
